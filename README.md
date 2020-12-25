@@ -3,6 +3,9 @@
 ##### Alacritty
 Terminal colorscheme, that's about it.
 
+##### Sway
+All my window manager config.
+
 ##### Vim
 A bare minimum `.vimrc` as well as my `init.vim`.
 
