@@ -13,6 +13,7 @@ Aliases and prompt.
 A script that automatically links each of the system's config files to the ones in this repository.
 
 ---
+
 ### TODO:
 
 Fully implement deployement strategy.

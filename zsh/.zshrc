@@ -45,7 +45,7 @@ bindkey '^H' backward-kill-word        # Let CTRL+BACKSPACE delete the previous 
 bindkey '^[[3;5~' kill-word            # Let CTRL+DELETE delete the next word.
 
 # Aliases.
-alias ls="ls --color=auto --group-directories-first"
+alias ls="ls -v --color=auto --group-directories-first"
 alias ll="ls -al --si --time-style=long-iso"
 alias vim="nvim"
 
