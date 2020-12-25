@@ -7,8 +7,12 @@ SAVEHIST=1000
 setopt autocd                          # Automatically cd if the command is a filename.
 unsetopt beep                          # Don't beep.
 
+# Setting defaults.
+export EDITOR="nvim"                   # Set neovim as default editor.
+export VISUAL="nvim"
+
 # Prompt settings.
-PROMPT="%F{2}%n@%M:%f%F{4}%~%f "      # "{username}@{machine name}:{currect directory} "
+PROMPT="%F{2}%n@%M:%f%F{4}%~%f "       # "{username}@{machine name}:{currect directory} "
 RPROMPT="[%?] %T"                      # "[{exit status}] {time}"
 
 # Command line vi mode settings.
@@ -43,4 +47,5 @@ bindkey '^[[3;5~' kill-word            # Let CTRL+DELETE delete the next word.
 # Aliases.
 alias ls="ls --color=auto --group-directories-first"
 alias ll="ls -al --si --time-style=long-iso"
+alias vim="nvim"
 
