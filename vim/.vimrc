@@ -4,7 +4,7 @@ filetype plugin indent on              " Enable filetype and plugin specific ind
 set nocompatible                       " Don't be vi compatible
 set noswapfile                         " Don't clutter with .swp files
 set nobackup                           " Don't clutter with backups
-set undodir=~/.vim/undodir             " Set undofile directory
+set undodir=/tmp//                     " Set undofile directory
 set undofile                           " Do save undofiles
 set encoding=utf-8                     " Encode in UTF-8
 set noerrorbells visualbell t_vb=      " No beeps or flashes
@@ -18,7 +18,6 @@ set softtabstop=4                      " Insert up to 4 spaces when tab is press
 set shiftwidth=4                       " Use 4 spaces for autoindentation and for >>, << and ==
 set expandtab                          " Convert tabs to spaces
 " Visual settings
-set termguicolors                      " Set the terminal highlighting to use the gui 24 bit colors
 set number                             " Show line numbers
 set relativenumber                     " Show relative line numbers
 set ruler                              " Show coordinates in bottom right
@@ -26,7 +25,6 @@ set scrolloff=8                        " Keep 8 lines on screen while scrolling
 set nowrap                             " Do not visually wrap long lines
 set showmatch                          " Highlight matching parenthesis
 set colorcolumn=80                     " Put a 80 character column line
-colorscheme dalek
 " Command line
 set showmode                           " Show the current mode
 set laststatus=2                       " Always show the status line
@@ -49,10 +47,6 @@ nnoremap <leader>l :wincmd l<CR>       " Navigate to right window
 nnoremap <leader>e :Lex<CR>            " Open file explorer
 nnoremap <silent><leader>= :vertical resize +5<CR>
 nnoremap <silent><leader>- :vertical resize -5<CR>
-nnoremap <leader>rce :edit ~/dotfiles/vim/.vimrc<CR>
-nnoremap <leader>rcr :source ~/.vimrc<CR>
-" TEMPORARY COLOR DEBUGGER
-nnoremap <leader>c :execute 'hi' synIDattr(synID(line("."), col("."), 1), "name")<CR>
 
 " File explorer
 let g:netrw_browse_split=2             " Open from netrw in new vsplit
