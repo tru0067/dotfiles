@@ -4,17 +4,18 @@
 Terminal colorscheme, that's about it.
 
 ##### Vim
-Sane defaults for vim, as well as a bare `init.vim` for neovim.
+A bare minimum `.vimrc` as well as my `init.vim`.
 
 ##### Zsh
 Aliases and prompt.
 
 ##### `deploy.sh`
 A script that automatically links each of the system's config files to the ones in this repository.
+Note that in some cases this will overwrite any existing system config files.
 
 ---
 
 ### TODO:
 
-Fully implement deployement strategy.
+Nothing at the moment :D
 

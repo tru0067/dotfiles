@@ -1,5 +1,10 @@
+#!/bin/bash
+
 # Symlink the alacritty config file.
 ln --symbolic ~/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
-# TODO: Add deployment strategies for other config files.
+# Create skeleton config files that just source the config files in this repository.
+# NOTE: This will destroy any existing config files!
+echo "source ~/dotfiles/vim/init.vim" > ~/.config/nvim/init.vim
+echo "source ~/dotfiles/zsh/.zshrc"   > ~/.zshrc
 
