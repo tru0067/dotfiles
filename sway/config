@@ -9,10 +9,6 @@
     set $down j
     set $up k
     set $right l
-    # Key for accessing the scratchpad.
-    set $scratchpad grave
-    # Key for accessing floating layer.
-    set $floating space
     # Your preferred terminal emulator.
     set $term alacritty
     # Your preferred application launcher
@@ -68,7 +64,7 @@
         # Kill focused window
         bindsym $mod+Shift+q kill
         # Start your launcher
-        bindsym $mod+d exec $menu
+        bindsym $mod+r exec $menu
         # Drag floating windows by holding down $mod and left mouse button.
         # Resize them with right mouse button + $mod.
         # Despite the name, also works for non-floating windows.
@@ -115,38 +111,37 @@
         bindsym $mod+Shift+0 move container to workspace 10
         # Note: workspaces can have any name you want, not just numbers.
         # We just use 1-10 as the default.
+        bindsym $mod+Tab workspace back_and_forth
     # Layout stuff:
+        # Move focus between parent and child containers
+        bindsym $mod+w focus parent
+        bindsym $mod+e focus child
+
+        # Swap focus between the tiling area and the floating area
+        bindsym $mod+a focus mode_toggle
+
+        # Move the current focus between tiling and floating mode
+        bindsym $mod+Shift+a floating toggle
+
+        # Switch the current container between different layout styles
+        bindsym $mod+s layout toggle split
+        bindsym $mod+d layout tabbed
+        bindsym $mod+f fullscreen
+
         # You can "split" the current object of your focus with
         # $mod+b or $mod+v, for horizontal and vertical splits
         # respectively.
         bindsym $mod+b splith
         bindsym $mod+v splitv
-
-        # Switch the current container between different layout styles
-        bindsym $mod+s layout stacking
-        bindsym $mod+w layout tabbed
-        bindsym $mod+e layout toggle split
-
-        # Make the current focus fullscreen
-        bindsym $mod+f fullscreen
-
-        # Swap focus between the tiling area and the floating area
-        bindsym $mod+$floating focus mode_toggle
-
-        # Move the current focus between tiling and floating mode
-        bindsym $mod+Shift+$floating floating toggle
-
-        # Move focus to the parent container
-        bindsym $mod+a focus parent
     # Scratchpad:
         # Sway has a "scratchpad", which is a bag of holding for windows.
         # You can send windows there and get them back later.
 
         # Show the next scratchpad window or hide the focused scratchpad window.
         # If there are multiple scratchpad windows, this command cycles through them.
-        bindsym $mod+$scratchpad scratchpad show
+        bindsym $mod+grave scratchpad show
         # Move the currently focused window to the scratchpad
-        bindsym $mod+Shift+$scratchpad move scratchpad
+        bindsym $mod+Shift+grave move scratchpad
     # Resizing containers:
         bindsym $mod+minus resize shrink width 10px
         bindsym $mod+equal resize grow width 10px
@@ -156,6 +151,9 @@
         bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%  
         bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
         bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+
+# Borders:
+    client.focused #444444 #1C1C1C #FFFFFF #FFFFFF
 
 # Status Bar:
     # Read `man 5 sway-bar` for more information about this section.
@@ -167,9 +165,9 @@
         status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
 
         colors {
-            statusline #ffffff
-            background #323232
-            inactive_workspace #32323200 #32323200 #5c5c5c
+            statusline #FFFFFF
+            background #1C1C1C
+            inactive_workspace #1C1C1C #1C1C1C #808080
         }
     }
 
