@@ -31,20 +31,21 @@ set laststatus=2                       " Always show the status line
 set showcmd                            " Show (partial) commands
 set cmdheight=2                        " Show two lines for the command line
 " Command behaviour
-" set wildmenu                           " Show completion options in the status bar
+"set wildmenu                           " Show completion options in the status bar
 set wildmode=longest,list              " Complete longest matching string, then show available matches
 set smartcase                          " Search only case sensitive if mixed case has been entered
 set incsearch                          " Incremental search
 set hidden                             " Allow windows to be closed without saving them
 
 " Bindings
-map Y y$                               " Y yanks to end of line (consistent with D and C)
+" Y yanks to end of line (consistent with D and C)
+nnoremap Y y$
 let mapleader=" "
-nnoremap <leader>h :wincmd h<CR>       " Navigate to left window
-nnoremap <leader>j :wincmd j<CR>       " Navigate to lower window
-nnoremap <leader>k :wincmd k<CR>       " Navigate to upper window
-nnoremap <leader>l :wincmd l<CR>       " Navigate to right window
-nnoremap <leader>e :Lex<CR>            " Open file explorer
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>e :Lex<CR
 nnoremap <silent><leader>= :vertical resize +5<CR>
 nnoremap <silent><leader>- :vertical resize -5<CR>
 
