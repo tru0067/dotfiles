@@ -20,7 +20,7 @@
 
 # Output configuration:
     # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-    output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+    output * bg ~/Pictures/wallpapers/winter/green_black_road.jpg fill
     #
     # Example configuration:
     #
@@ -162,6 +162,11 @@
         bindsym $mod+equal resize grow width 10px
         bindsym $mod+underscore resize shrink height 10px
         bindsym $mod+plus resize grow height 10px
+    # Volume buttons:
+        bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"  
+        bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"  
+        bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle && amixer -q sset Speaker,0 toggle"  
+        bindsym XF86AudioMicMute exec "amixer set Capture toggle"
 
 # Status Bar:
     # Read `man 5 sway-bar` for more information about this section.
