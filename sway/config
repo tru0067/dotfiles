@@ -11,6 +11,8 @@
     set $right l
     # Key for accessing the scratchpad.
     set $scratchpad grave
+    # Key for accessing floating layer.
+    set $floating space
     # Your preferred terminal emulator.
     set $term alacritty
     # Your preferred application launcher
@@ -83,22 +85,11 @@
         bindsym $mod+$down focus down
         bindsym $mod+$up focus up
         bindsym $mod+$right focus right
-        # Or use $mod+[up|down|left|right]
-        bindsym $mod+Left focus left
-        bindsym $mod+Down focus down
-        bindsym $mod+Up focus up
-        bindsym $mod+Right focus right
-
         # Move the focused window with the same, but add Shift
         bindsym $mod+Shift+$left move left
         bindsym $mod+Shift+$down move down
         bindsym $mod+Shift+$up move up
         bindsym $mod+Shift+$right move right
-        # Ditto, with arrow keys
-        bindsym $mod+Shift+Left move left
-        bindsym $mod+Shift+Down move down
-        bindsym $mod+Shift+Up move up
-        bindsym $mod+Shift+Right move right
     # Workspaces:
         # Switch to workspace
         bindsym $mod+1 workspace 1
@@ -139,11 +130,11 @@
         # Make the current focus fullscreen
         bindsym $mod+f fullscreen
 
-        # Toggle the current focus between tiling and floating mode
-        bindsym $mod+Shift+space floating toggle
-
         # Swap focus between the tiling area and the floating area
-        bindsym $mod+space focus mode_toggle
+        bindsym $mod+$floating focus mode_toggle
+
+        # Move the current focus between tiling and floating mode
+        bindsym $mod+Shift+$floating floating toggle
 
         # Move focus to the parent container
         bindsym $mod+a focus parent
@@ -151,22 +142,20 @@
         # Sway has a "scratchpad", which is a bag of holding for windows.
         # You can send windows there and get them back later.
 
-        # Move the currently focused window to the scratchpad
-        bindsym $mod+Shift+$scratchpad move scratchpad
-
         # Show the next scratchpad window or hide the focused scratchpad window.
         # If there are multiple scratchpad windows, this command cycles through them.
         bindsym $mod+$scratchpad scratchpad show
+        # Move the currently focused window to the scratchpad
+        bindsym $mod+Shift+$scratchpad move scratchpad
     # Resizing containers:
         bindsym $mod+minus resize shrink width 10px
         bindsym $mod+equal resize grow width 10px
         bindsym $mod+underscore resize shrink height 10px
         bindsym $mod+plus resize grow height 10px
     # Volume buttons:
-        bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"  
-        bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"  
-        bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle && amixer -q sset Speaker,0 toggle"  
-        bindsym XF86AudioMicMute exec "amixer set Capture toggle"
+        bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%  
+        bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+        bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # Status Bar:
     # Read `man 5 sway-bar` for more information about this section.
