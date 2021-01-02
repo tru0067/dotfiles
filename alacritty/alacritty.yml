@@ -96,53 +96,47 @@
 
 # Font configuration
 font:
-  # Normal (roman) font face
+  # Blex - derivative of IBM Plex
+  normal:
+    family: BlexMono Nerd Font Mono
+    style: Regular
+  bold:
+    family: BlexMono Nerd Font Mono
+    style: Bold
+  italic:
+    family: BlexMono Nerd Font Mono
+    style: Italic
+  bold_italic:
+    family: BlexMono Nerd Font Mono
+    style: Bold Italic
+  #
+  # JetBrains
   #normal:
-    # Font family
-    #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
-    #family: monospace
-
-    # The `style` can be specified to pick a specific face.
-    #style: Regular
-
-  # Bold font face
+  #  family: JetBrainsMono Nerd Font Mono
+  #  style: Regular
   #bold:
-    # Font family
-    #
-    # If the bold family is not specified, it will fall back to the
-    # value specified for the normal font.
-    #family: monospace
-
-    # The `style` can be specified to pick a specific face.
-    #style: Bold
-
-  # Italic font face
+  #  family: JetBrainsMono Nerd Font Mono
+  #  style: Bold
   #italic:
-    # Font family
-    #
-    # If the italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    #family: monospace
-
-    # The `style` can be specified to pick a specific face.
-    #style: Italic
-
-  # Bold italic font face
+  #  family: JetBrainsMono Nerd Font Mono
+  #  style: Italic
   #bold_italic:
-    # Font family
-    #
-    # If the bold italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    #family: monospace
-
-    # The `style` can be specified to pick a specific face.
-    #style: Bold Italic
-
-  # Point size
+  #  family: JetBrainsMono Nerd Font Mono
+  #  style: Bold Italic
+  #
+  # Literation - derivative of Liberation
+  #normal:
+  #  family: LiterationMono Nerd Font Mono
+  #  style: Book
+  #bold:
+  #  family: LiterationMono Nerd Font Mono
+  #  style: Bold
+  #italic:
+  #  family: LiterationMono Nerd Font Mono
+  #  style: Italic
+  #bold_italic:
+  #  family: LiterationMono Nerd Font Mono
+  #  style: Bold Italic
   size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
@@ -162,9 +156,8 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Dalek)
+# Colors (Dalak)
 colors:
-  # Default colors
   primary:
     background: '#1C1C1C'
     foreground: '#CCCCCC'
@@ -388,16 +381,6 @@ colors:
 # Directory the shell is started in. If this is unset, or `None`, the working
 # directory of the parent process will be used.
 #working_directory: None
-
-# WinPTY backend (Windows only)
-#
-# Alacritty defaults to using the newer ConPTY backend if it is available,
-# since it resolves a lot of bugs and is quite a bit faster. If it is not
-# available, the WinPTY backend will be used instead.
-#
-# Setting this option to `true` makes Alacritty use the legacy WinPTY backend,
-# even if the ConPTY backend is available.
-#winpty_backend: false
 
 # Send ESC (\x1b) before characters when alt is pressed.
 #alt_send_esc: true
@@ -742,3 +725,4 @@ colors:
 
   # Print all received window events.
   #print_events: false
+
