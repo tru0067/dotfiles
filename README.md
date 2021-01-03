@@ -13,12 +13,15 @@ A bare minimum `.vimrc` as well as my `init.vim`.
 Aliases and prompt.
 
 ##### `deploy.sh`
-A script that automatically links each of the system's config files to the ones in this repository.
-Note that in some cases this will overwrite any existing system config files.
+A script that automatically links each of the system's config files to the ones
+in this repository.  Note that in some cases this will overwrite any existing
+system config files.
 
 ---
 
 ### TODO:
 
-Nothing at the moment :D
+##### Vim
+Change formatoptions to be loaded after. Likewise set up the tex.vim, will
+probably want another deploy script specifically for vim stuff.
 
