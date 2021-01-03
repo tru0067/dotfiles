@@ -24,3 +24,18 @@ if [[ ! -f ~/.zshrc ]]; then
     echo "source ~/dotfiles/zsh/.zshrc"   > ~/.zshrc
 fi
 
+# Now do the same for every vim file in `after/ftplugin/`
+for filename in after/ftplugin/*.vim; do
+    # Check that the filename we just matched actually exists.
+    if [[ ! -f "$filename" ]]; then
+        continue
+    fi
+    # Strip out the path part (just keep the filename itself).
+    filename="$(basename -- $filename)"
+    # Check if we already have a corresponding file in our config directory.
+    if [[ ! -f ~/.config/nvim/after/ftplugin/$filename ]]; then
+        # If we don't, make one to source the one in this repo.
+        echo "source ~/dotfiles/vim/after/ftplugin/$filename" > ~/.config/nvim/after/ftplugin/$filename
+    fi
+done
+
