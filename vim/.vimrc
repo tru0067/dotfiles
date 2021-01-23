@@ -63,7 +63,3 @@ let g:netrw_winsize=25                 " Open netrw with 25% of current buffer
 " LaTeX
 let g:tex_flavor="latex"               " Use LaTeX rather than TeX as the default for .tex files
 
-" Open new buffers in insert mode.
-au BufNewFile * startinsert
-au VimEnter * if empty(expand("%")) | startinsert | endif
-
