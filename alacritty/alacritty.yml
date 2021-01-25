@@ -156,11 +156,11 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Dalak)
+# Colors
 colors:
   primary:
-    background: '#1C1C1C'
-    foreground: '#CCCCCC'
+    background: '#22262A'
+    foreground: '#F1E6D9'
 
     # Bright and dim foreground colors
     #
@@ -220,25 +220,25 @@ colors:
 
   # Normal colors
   normal:
-    black:   '#1C1C1C'
-    red:     '#5F0000'
+    black:   '#22262A'
+    red:     '#BF4052'
     green:   '#00AF60'
-    yellow:  '#81A1C1'
-    blue:    '#5E81AC'
-    magenta: '#6000AF'
-    cyan:    '#005F87'
-    white:   '#808080'
+    yellow:  '#B57C65'
+    blue:    '#5A89AD'
+    magenta: '#8558C7'
+    cyan:    '#109191'
+    white:   '#808892'
 
   # Bright colors
   bright:
-    black:   '#444444'
-    red:     '#AF0000'
-    green:   '#00AF00'
+    black:   '#384048'
+    red:     '#E04F86'
+    green:   '#80D468'
     yellow:  '#FFFFAF'
-    blue:    '#0061D7'
-    magenta: '#8800D7'
-    cyan:    '#0088D7'
-    white:   '#FFFFFF'
+    blue:    '#87B4E0'
+    magenta: '#D668E1'
+    cyan:    '#5BDDD0'
+    white:   '#F1E6D9'
 
   # Dim colors
   #

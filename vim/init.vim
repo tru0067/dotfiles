@@ -2,7 +2,7 @@ source ~/.vimrc                        " Source the vim specific settings first.
 
 " Colorscheme.
 set termguicolors                      " Set the terminal highlighting to use the gui 24 bit colors.
-colorscheme dalak
+colorscheme verdurous
 
 " Bindings.
 " Edit the various config files.
