@@ -11,9 +11,21 @@ unsetopt beep                          # Don't beep.
 export EDITOR="nvim"                   # Set neovim as default editor.
 export VISUAL="nvim"
 
+## Git integration.
+#autoload -Uz vcs_info
+#precmd_vcs_info() { vcs_info }
+#precmd_functions+=( precmd_vcs_info )
+#setopt prompt_subst
+#zstyle ':vcs_info:git:*' formats '%F{6} %b%f ' # " {branch name} "
+#zstyle ':vcs_info:*' enable git
+#
+## Prompt settings.
+#PROMPT='%F{2}%n@%M%f:%F{4}%~%f ${vcs_info_msg_0_}' # "{username}@{machine name}:{currect directory} {vcs info}"
+#RPROMPT='%F{7}[%?] %T%f'                      # "[{exit status}] {time}"
+
 # Prompt settings.
-PROMPT="%F{2}%n@%M:%f%F{4}%~%f "       # "{username}@{machine name}:{currect directory} "
-RPROMPT="[%?] %T"                      # "[{exit status}] {time}"
+PROMPT='%F{2}%n@%M%f:%F{4}%~%f '              # "{username}@{machine name}:{currect directory} "
+RPROMPT='%F{7}[%?] %T%f'                      # "[{exit status}] {time}"
 
 # Command line vi mode settings.
 bindkey -v                             # Use vi keybindings for editing the command line.
