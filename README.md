@@ -14,8 +14,9 @@ Aliases and prompt.
 
 ##### `deploy.sh`
 A script that automatically links each of the system's config files to the ones
-in this repository.  Note that in some cases this will overwrite any existing
-system config files.
+in this repository. Where possible, we source this repo's config file within the
+system config file, where this is not possible, we symlink them. If those files
+already exist, this script does not overwrite them.
 
 ---
 
