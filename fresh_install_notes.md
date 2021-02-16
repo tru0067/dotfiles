@@ -71,7 +71,15 @@ installing these themes I use gnome-tweaks. Available via:
 sudo apt install gnome-tweaks
 ```
 
-TODO: Keyboard!!!!! xkb stuff.
+##### xkb
+I use a custom xkb keyboard layout. This can be enabled by first linking my
+layout:
+```
+sudo ln --symbolic ~/dotfiles/xkb/symbols/tt /usr/share/X11/xkb/symbols
+```
+and then by copying the contents of `xkb/evdev.xml` into
+`/usr/share/X11/xkb/rules/evdev.xml`. A restart is required, and then the
+keyboard layout can be selected.
 
 TODO: Sway!!!!!!
 
