@@ -18,11 +18,14 @@ in this repository. Where possible, we source this repo's config file within the
 system config file, where this is not possible, we symlink them. If those files
 already exist, this script does not overwrite them.
 
+##### `fresh_install_notes.md`
+A brief outline of some common steps when performing a fresh install.
+
 ---
 
 ### TODO:
 
 ##### Vim
-Change formatoptions to be loaded after. Likewise set up the tex.vim, will
-probably want another deploy script specifically for vim stuff.
+Change formatoptions to be loaded after. Is it possible to do this for every
+filetype? Could source a generic one for each if not...
 
