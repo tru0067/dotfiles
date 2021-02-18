@@ -10,7 +10,7 @@ set encoding=utf-8                     " Encode in UTF-8
 set noerrorbells visualbell t_vb=      " No beeps or flashes
 " Broad behaviour
 set backspace=indent,eol,start         " Allow backspace to behave as expected
-set clipboard=unnamed                  " Set clipboard to unnamed to access the system clipboard
+set clipboard=unnamedplus              " Set clipboard to unnamed to access the system clipboard
 set mouse=a                            " Allow usage of the mouse
 set autoindent                         " Allow autoindentation
 set tabstop=8                          " Display real tabs as 8 spaces
