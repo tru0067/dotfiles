@@ -19,6 +19,9 @@ mkdir -p ~/.config/nvim
 if [[ ! -f ~/.config/nvim/init.vim ]]; then
     printf "source ~/dotfiles/vim/init.vim" > ~/.config/nvim/init.vim
 fi
+if [[ ! -f ~/.config/nvim/filetype.vim ]]; then
+    printf "source ~/dotfiles/vim/filetype.vim" > ~/.config/nvim/filetype.vim
+fi
 if [[ ! -f ~/.zshrc ]]; then
     printf "source ~/dotfiles/zsh/.zshrc" > ~/.zshrc
 fi
