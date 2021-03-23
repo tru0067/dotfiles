@@ -1,14 +1,16 @@
 # Notes for a fully fresh install.
 
-##### Git
+## Vital programs
+
+### Git
 First and foremost, I'll need git:
-```
+```bash
 sudo apt install git
 ```
 I'll probably want to set up a personal access token for this machine. I also
 like to use a remote url that contains my username, as this makes it easy to
 manage multiple accounts, along with storing my credentials:
-```
+```bash
 # Clone with username in url.
 git clone https://tru0067@github.com/tru0067/dotfiles.git
 # Add remote url with username (e.g. when making a new repo).
@@ -19,79 +21,107 @@ git remote set-url origin https://tru0067@github.com/tru0067/dotfiles.git
 git config credential.helper store
 ```
 
-##### Wallpapers
-I have my own wallpaper repo. Available at
-<https://github.com/tru0067/wallpapers>.
-
-##### Fonts
-I'm partial to the Literation Nerd Font family. As well as Blex and JetBrains.
-TODO: Figure out a way of making these install friendly.
-After installing them, make sure to refresh the font cache:
-```
-fc-cache -f
-```
-
-##### Verdurous
-I have my own vim colorscheme. Available at
-<https://github.com/tru0067/verdurous>.
-
-##### Neovim
-My editor of choice is neovim:
-```
-sudo apt install neovim
-```
-
-##### Zsh
-My shell of choice:
-```
-sudo apt install zsh
-```
-I should then set it to be the default:
-```
-chsh --shell /usr/bin/zsh
-```
-I need to logout and log back in again for that change to occur.
-
-##### Alacritty
+### Alacritty
 Alacritty is not as of yet in the official ubuntu repos. Thus I intall it from
 the popOS PPA:
-```
+```bash
 sudo add-apt-repository ppa:mmstick76/alacritty
 sudo apt-get update
 sudo apt install alacritty
 ```
-I'll then want to make alacritty our default terminal emulator (this may not be
+I'll then want to make alacritty my default terminal emulator (this may not be
 necessary, but good to know how to do):
-```
+```bash
 sudo update-alternatives --config x-terminal-emulator
 ```
 
-##### PCManFM
+### Zsh
+My shell of choice:
+```bash
+sudo apt install zsh
+```
+I should then set it to be the default:
+```bash
+chsh --shell /usr/bin/zsh
+```
+I need to logout and log back in again for that change to occur.
+
+### Neovim
+My editor of choice is neovim:
+```bash
+sudo apt install neovim
+```
+
+TODO: I think I want to build it from source at some point.
+
+### PCManFM
 My file manager of choice is PCManFM:
 ```
 sudo apt install pcmanfm
 ```
 
-TODO: Do I want PCManFM to manage desktop icons? `pcmanfm --desktop`.
+TODO: Do I want PCManFM to manage desktop icons? `pcmanfm --desktop`. Would this
+work with sway? Does PCManFM play nice in wayland?
 
-##### GTK and icon themes
+## Appearance
+
+### Fonts
+I'm partial to the Literation Nerd Font family. As well as Blex and JetBrains.
+TODO: Figure out a way of making these install friendly.
+After installing them, make sure to refresh the font cache:
+```bash
+fc-cache -f
+```
+
+### Verdurous
+I have my own vim colorscheme. Available at
+<https://github.com/tru0067/verdurous>.
+
+### Dotfiles
+Now that all that stuff is installed, I should be able to configure them with my
+dotfiles repo, which we are in! Available at
+<https://github.com/tru0067/dotfiles>.
+
+### GTK and icon themes
 I like Qogir dark, which is available at
 <https://github.com/vinceliuice/Qogir-theme> and the papirus icon theme,
 available at <https://github.com/PapirusDevelopmentTeam/papirus-icon-theme>. For
 installing these themes I use gnome-tweaks. Available via:
-```
+```bash
 sudo apt install gnome-tweaks
 ```
 
-##### xkb
+## Keyboard
+
+### xkb
 I use a custom xkb keyboard layout. This can be enabled by first linking my
 layout:
-```
+```bash
 sudo ln --symbolic ~/dotfiles/xkb/symbols/tt /usr/share/X11/xkb/symbols
 ```
 and then by copying the contents of `xkb/evdev.xml` into
 `/usr/share/X11/xkb/rules/evdev.xml`. A restart is required, and then the
 keyboard layout can be selected.
 
-TODO: Sway!!!!!!
+## Window manager
 
+### Sway
+TODO: Sway!?!?!?
+
+## Other programs or packages
+
+### Anaconda
+When developing with python, I typically use the Anaconda distribution,
+available at <https://www.anaconda.com/products/individual>.
+
+### Dropbox
+TODO: Dropbox!
+
+### Spotify
+TODO: Spotify
+
+### Code
+TODO: Code?
+
+### Chrome
+TODO: Chrome?
