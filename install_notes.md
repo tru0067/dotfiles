@@ -114,6 +114,13 @@ TODO: Sway!?!?!?
 When developing with python, I typically use the Anaconda distribution,
 available at <https://www.anaconda.com/products/individual>.
 
+### LaTeX and Pandoc
+I often use LaTeX for academic writing, and for its PDF capabilities when
+combined with Pandoc. I default to the TeXLive distribution:
+```bash
+sudo apt install texlive pandoc
+```
+
 ### Dropbox
 TODO: Dropbox!
 
