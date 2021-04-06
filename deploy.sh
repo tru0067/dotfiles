@@ -26,7 +26,7 @@ if [[ ! -f ~/.zshrc ]]; then
     printf "source ~/dotfiles/zsh/.zshrc" > ~/.zshrc
 fi
 
-# Now do the same for every vim file in this repo's `after/ftplugin/`
+# Now do the same for every vim file in this repo's `vim/after/ftplugin/`
 for filename in vim/after/ftplugin/*.vim; do
     # Check that the filename we just matched actually exists.
     if [[ ! -f "$filename" ]]; then
@@ -42,3 +42,18 @@ for filename in vim/after/ftplugin/*.vim; do
     fi
 done
 
+# And for every vim file in this repo's `vim/after/syntax/`
+for filename in vim/after/syntax/*.vim; do
+    # Check that the filename we just matched actually exists.
+    if [[ ! -f "$filename" ]]; then
+        continue
+    fi
+    # Strip out the path part (just keep the filename itself).
+    filename="$(basename -- $filename)"
+    # Check if we already have a corresponding file in our config directory.
+    mkdir -p ~/.config/nvim/after/syntax
+    if [[ ! -f ~/.config/nvim/after/syntax/$filename ]]; then
+        # If we don't, make one to source the one in this repo.
+        printf "source ~/dotfiles/vim/after/syntax/$filename" > ~/.config/nvim/after/syntax/$filename
+    fi
+done
