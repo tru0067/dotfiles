@@ -46,9 +46,9 @@ set incsearch                          " Incremental search
 set hidden                             " Allow windows to be closed without saving them
 " List and listchars behaviour
 set list                               " Use the list chars feature
-set listchars=nbsp:␣                   " Non-breaking space
-set listchars+=tab:\|·>                " Tabs
-set listchars+=trail:·                 " Trailing spaces
+set listchars=nbsp:_                   " Non-breaking space
+set listchars+=tab:\|->                " Tabs
+set listchars+=trail:-                 " Trailing spaces
 set listchars+=extends:>               " Text extending past end of window
 set listchars+=precedes:<              " Text preceding past start of window
 
@@ -71,4 +71,3 @@ let g:netrw_winsize=25                 " Open netrw with 25% of current buffer
 
 " LaTeX
 let g:tex_flavor="latex"               " Use LaTeX rather than TeX as the default for .tex files
-
