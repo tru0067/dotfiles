@@ -18,6 +18,7 @@ set softtabstop=4                      " Insert up to 4 spaces when tab is press
 set shiftwidth=4                       " Use 4 spaces for autoindentation and for >>, << and ==
 set expandtab                          " Convert tabs to spaces
 " Formatting options
+" TODO: These should be moved into `after/` as they often are overwritten
 set formatoptions=r                    " Automatically insert the comment leader when pressing <Enter> in insert mode
 set formatoptions+=q                   " Allow formatting with "gq"
 set formatoptions+=n                   " Recognize numbered lists when formatting
@@ -28,6 +29,7 @@ set number                             " Show line numbers
 set relativenumber                     " Show relative line numbers
 set ruler                              " Show coordinates in bottom right
 set scrolloff=8                        " Keep 8 lines on screen while scrolling
+set sidescrolloff=8                    " Keep 8 columns on screen while scrolling
 set nowrap                             " Do not visually wrap long lines
 set showmatch                          " Highlight matching parenthesis
 set colorcolumn=80                     " Put a 80 character column line
@@ -42,6 +44,13 @@ set wildmode=longest,list              " Complete longest matching string, then 
 set smartcase                          " Search only case sensitive if mixed case has been entered
 set incsearch                          " Incremental search
 set hidden                             " Allow windows to be closed without saving them
+" List and listchars behaviour
+set list                               " Use the list chars feature
+set listchars=nbsp:␣                   " Non-breaking space
+set listchars+=tab:\|·>                " Tabs
+set listchars+=trail:·                 " Trailing spaces
+set listchars+=extends:>               " Text extending past end of window
+set listchars+=precedes:<              " Text preceding past start of window
 
 " Bindings
 " Y yanks to end of line (consistent with D and C)
