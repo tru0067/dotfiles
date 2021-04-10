@@ -17,13 +17,7 @@ set tabstop=8                          " Display real tabs as 8 spaces
 set softtabstop=4                      " Insert up to 4 spaces when tab is pressed
 set shiftwidth=4                       " Use 4 spaces for autoindentation and for >>, << and ==
 set expandtab                          " Convert tabs to spaces
-" Formatting options
-" TODO: These should be moved into `after/` as they often are overwritten
-set formatoptions=r                    " Automatically insert the comment leader when pressing <Enter> in insert mode
-set formatoptions+=q                   " Allow formatting with "gq"
-set formatoptions+=n                   " Recognize numbered lists when formatting
-set formatoptions+=j                   " Remove comment leader when joining lines with "J"
-set textwidth=80                       " Use a text width of 80 characters (only used with "gq" with the above formatting settings)
+set textwidth=80                       " Use a text width of 80 characters
 " Visual settings
 set number                             " Show line numbers
 set relativenumber                     " Show relative line numbers

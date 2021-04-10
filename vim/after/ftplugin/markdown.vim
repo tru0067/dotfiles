@@ -1,3 +1,1 @@
-setlocal wrap                           " Visually wrap long lines.
-setlocal linebreak                      " But break those long lines at appropriate places.
-setlocal spell                          " Use a dictionary.
+source ~/.config/nvim/after/ftplugin/Writing.vim
