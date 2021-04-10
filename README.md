@@ -30,11 +30,3 @@ those files already exist, this script does not overwrite them.
 
 ##### `install_notes.md`
 A brief outline of some common steps when performing a fresh install.
-
----
-
-### TODO:
-
-##### Vim
-Change formatoptions to be loaded after. Is it possible to do this for every
-filetype? Could source a generic one for each if not...

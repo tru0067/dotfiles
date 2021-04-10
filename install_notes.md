@@ -106,7 +106,26 @@ keyboard layout can be selected.
 ## Window manager
 
 ### Sway
-TODO: Sway!?!?!?
+I've been experimenting with sway as my window manager:
+```bash
+sudo apt install sway
+```
+I typically configure my keyboard/mouse with sway on a per device basis, good
+options to know are:
+```
+input <keyboard> {
+    xkb_layout "tt"
+    xkb_variant "modded"
+}
+input <touchpad> {
+    tap enabled
+    natural_scroll enabled
+}
+```
+The list of input devices can be obtained from within sway with:
+```bash
+swaymsg -t get_inputs
+```
 
 ## Other programs or packages
 
