@@ -17,8 +17,8 @@
     set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 # Output configuration:
-    # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-    output * bg ~/Pictures/wallpapers/winter/green_black_road.jpg fill
+    # Default wallpaper
+    output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     #
     # Example configuration:
     #
@@ -30,11 +30,11 @@
     #
     # Example configuration:
     #
-    # exec swayidle -w \
-    #          timeout 300 'swaylock -f -c 000000' \
-    #          timeout 600 'swaymsg "output * dpms off"' \
-    #               resume 'swaymsg "output * dpms on"' \
-    #          before-sleep 'swaylock -f -c 000000'
+    #     exec swayidle -w \
+    #         timeout 300 'swaylock -f -c 000000' \
+    #         timeout 600 'swaymsg "output * dpms off"' \
+    #              resume 'swaymsg "output * dpms on"' \
+    #         before-sleep 'swaylock -f -c 000000'
     #
     # This will lock your screen after 300 seconds of inactivity, then turn off
     # your displays after another 300 seconds, and turn your screens back on
@@ -66,7 +66,7 @@
         # Start your launcher
         bindsym $mod+r exec $menu
         # Drag floating windows by holding down $mod and left mouse button.
-        # Resize them with right mouse button + $mod.
+        # Resize them with $mod + right mouse button.
         # Despite the name, also works for non-floating windows.
         # Change normal to inverse to use left mouse button for resizing and
         # right mouse button for dragging.
@@ -130,9 +130,9 @@
 
         # You can "split" the current object of your focus with
         # $mod+b or $mod+v, for horizontal and vertical splits
-        # respectively.
-        bindsym $mod+b splith
-        bindsym $mod+v splitv
+        # respectively. Using the vim split direction.
+        bindsym $mod+v splith
+        bindsym $mod+b splitv
     # Scratchpad:
         # Sway has a "scratchpad", which is a bag of holding for windows.
         # You can send windows there and get them back later.
@@ -153,7 +153,12 @@
         bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # Borders:
-    client.focused #444444 #1C1C1C #FFFFFF #FFFFFF
+    default_border pixel 1
+    default_floating_border normal
+    # Colors given are <border> <background> <text> <indicator> <child_border>
+    client.focused          #5A89AD #5A89AD #F1E6D9 #00AF60 #5A89AD
+    client.focused_inactive #22262A #22262A #808892 #22262A #22262A
+    client.unfocused        #1C1C1C #1C1C1C #808892 #1C1C1C #1C1C1C
 
 # Status Bar:
     # Read `man 5 sway-bar` for more information about this section.
@@ -162,13 +167,20 @@
 
         # When the status_command prints a new line to stdout, swaybar updates.
         # The default just shows the current date and time.
-        status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+        status_command while ~/.config/sway/status.sh; do sleep 1; done
 
         colors {
-            statusline #FFFFFF
             background #1C1C1C
-            inactive_workspace #1C1C1C #1C1C1C #808080
+            statusline #F1E6D9
+            separator  #808892
+            # Colors given are <border> <background> <text>
+            active_workspace   #5A89AD #5A89AD #F1E6D9
+            inactive_workspace #1C1C1C #1C1C1C #808892
         }
+
+        #font BlexMono Nerd Font Bold Italic 11
+        #font JetBrainsMono Nerd Font Bold Italic 10.5
+        font LiterationMono Nerd Font Bold Italic 11
     }
 
 include /etc/sway/config.d/*

@@ -12,6 +12,9 @@ mkdir -p ~/.config/sway
 if [[ ! -f ~/.config/sway/config ]]; then
     printf "include ~/dotfiles/sway/config" > ~/.config/sway/config
 fi
+if [[ ! -f ~/.config/sway/status.sh ]]; then
+    cp ~/dotfiles/sway/status.sh ~/.config/sway/status.sh
+fi
 if [[ ! -f ~/.vimrc ]]; then
     printf "source ~/dotfiles/vim/.vimrc" > ~/.vimrc
 fi
