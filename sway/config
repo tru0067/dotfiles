@@ -151,6 +151,9 @@
         bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%  
         bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
         bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+    # TODO: Brightness buttons: `brightnessctl`? Other options? See
+    #       https://wiki.archlinux.org/index.php/Sway#Custom_keybindings
+    #       for some good ones.
 
 # Borders:
     default_border pixel 1
