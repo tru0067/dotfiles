@@ -85,11 +85,7 @@ dotfiles repo, which we are in! Available at
 ### GTK and icon themes
 I like Qogir dark, which is available at
 <https://github.com/vinceliuice/Qogir-theme> and the papirus icon theme,
-available at <https://github.com/PapirusDevelopmentTeam/papirus-icon-theme>. For
-installing these themes I use gnome-tweaks. Available via:
-```bash
-sudo apt install gnome-tweaks
-```
+available at <https://github.com/PapirusDevelopmentTeam/papirus-icon-theme>.
 
 ## Keyboard
 
