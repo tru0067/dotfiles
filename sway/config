@@ -18,7 +18,7 @@
 
 # Output configuration:
     # Default wallpaper
-    output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+    #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     #
     # Example configuration:
     #
@@ -156,7 +156,7 @@
     #       for some good ones.
 
 # Borders:
-    default_border normal 1
+    default_border pixel 1
     default_floating_border normal 1
     # Colors given are <border> <background> <text> <indicator> <child_border>
     client.focused          #5A89AD #5A89AD #F1E6D9 #00AF60 #5A89AD

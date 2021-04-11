@@ -110,6 +110,7 @@ I've been experimenting with sway as my window manager:
 ```bash
 sudo apt install sway
 ```
+
 I typically configure my keyboard/mouse with sway on a per device basis, good
 options to know are:
 ```
@@ -126,6 +127,9 @@ The list of input devices can be obtained from within sway with:
 ```bash
 swaymsg -t get_inputs
 ```
+
+In order for firefox to use the wayland backend, it may be necessary to add
+`MOZ_ENABLE_WAYLAND=1` to `~/.config/environment.d/envars.conf`.
 
 ## Other programs or packages
 
