@@ -133,6 +133,9 @@
         # respectively. Using the vim split direction.
         bindsym $mod+v splith
         bindsym $mod+b splitv
+    # Borders:
+        # Cycle through available border styles
+        bindsym $mod+z border toggle
     # Scratchpad:
         # Sway has a "scratchpad", which is a bag of holding for windows.
         # You can send windows there and get them back later.
