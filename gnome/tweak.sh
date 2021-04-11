@@ -1,4 +1,6 @@
 #!/bin/sh
+# Use larger text.
+#gsettings set org.gnome.desktop.interface text-scaling-factor 1.25
 # Allow focus on hover.
 gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 # Disable default <Super+Num> app switching.
