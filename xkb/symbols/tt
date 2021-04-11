@@ -59,7 +59,7 @@ xkb_symbols "normal" {
     key <CAPS> {[ Caps_Lock ]};
     key <LCTL> {[ Control_L ]};
     key <ESC>  {[    Escape ]};
-    
+
     modifier_map Control { <LCTL> };
 };
 
@@ -123,6 +123,6 @@ xkb_symbols "modded" {
     key <CAPS> {[ Control_L ]};
     key <LCTL> {[    Escape ]};
     key <ESC>  {[     grave,    asciitilde      ]};
-    
+
     modifier_map Control { <CAPS> };
 };
