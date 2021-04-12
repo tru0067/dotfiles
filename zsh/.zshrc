@@ -31,24 +31,17 @@ KEYTIMEOUT=5                           # Remove mode switching delay.
 bindkey -v '^?' backward-delete-char   # Allow backspacing past start of insertion.
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
-    if [[ ${KEYMAP} == vicmd ]] ||
-       [[ $1 = 'block' ]]; then
+    if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
         echo -ne '\e[1 q'
 
-    elif [[ ${KEYMAP} == main ]] ||
-         [[ ${KEYMAP} == viins ]] ||
-         [[ ${KEYMAP} = '' ]] ||
-         [[ $1 = 'beam' ]]; then
+    elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] ||
+         [[ ${KEYMAP} = '' ]] || [[ $1 = 'beam' ]]; then
         echo -ne '\e[5 q'
     fi
 }
+function zle-line-init() { echo -ne "\e[5 q" }
 zle -N zle-keymap-select
-# Use beam shape cursor on startup.
-echo -ne '\e[5 q'
-# Use beam shape cursor for each new prompt.
-preexec() {
-    echo -ne '\e[5 q'
-}
+zle -N zle-line-init
 
 # Keybindings.
 bindkey '^H' backward-kill-word        # Let CTRL+BACKSPACE delete the previous word.
