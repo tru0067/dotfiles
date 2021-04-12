@@ -127,6 +127,11 @@ swaymsg -t get_inputs
 In order for firefox to use the wayland backend, it may be necessary to add
 `MOZ_ENABLE_WAYLAND=1` to `~/.config/environment.d/envars.conf`.
 
+I also use wofi as my application launcher for sway:
+```bash
+sudo apt install wofi
+```
+
 ## Other programs or packages
 
 ### Anaconda
