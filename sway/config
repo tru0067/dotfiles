@@ -141,10 +141,10 @@
         # Move the currently focused window to the scratchpad.
         bindsym $mod+Shift+grave move scratchpad
     # Resizing containers:
-        bindsym $mod+minus resize shrink width 10px
-        bindsym $mod+equal resize grow width 10px
-        bindsym $mod+underscore resize shrink height 10px
-        bindsym $mod+plus resize grow height 10px
+        bindsym $mod+minus resize shrink width 40px
+        bindsym $mod+equal resize grow width 40px
+        bindsym $mod+underscore resize shrink height 20px
+        bindsym $mod+plus resize grow height 20px
     # Volume buttons:
         bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
         bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
