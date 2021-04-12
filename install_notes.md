@@ -106,6 +106,11 @@ I've been experimenting with sway as my window manager:
 ```bash
 sudo apt install sway
 ```
+I use `wofi` as my application launcher for sway, and use `brightnessctl` to
+control backlight brightness:
+```bash
+sudo apt install wofi brightnessctl
+```
 
 I typically configure my keyboard/mouse with sway on a per device basis, good
 options to know are:
@@ -126,11 +131,6 @@ swaymsg -t get_inputs
 
 In order for firefox to use the wayland backend, it may be necessary to add
 `MOZ_ENABLE_WAYLAND=1` to `~/.config/environment.d/envars.conf`.
-
-I also use wofi as my application launcher for sway:
-```bash
-sudo apt install wofi
-```
 
 ## Other programs or packages
 
