@@ -2,6 +2,10 @@
 # The default config file can be found at:
 # https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 
+# Colorscheme.
+import:
+  - /home/tru0067/.config/alacritty/verdurous-dark.yml
+
 # Font configuration.
 font:
   # Blex - derivative of IBM Plex.
@@ -45,32 +49,6 @@ font:
   #bold_italic:
   #  family: LiterationMono Nerd Font Mono
   #  style: Bold Italic
-
-# Colors.
-colors:
-  primary:
-    background: '#22262A'
-    foreground: '#F1E6D9'
-  # Normal colors.
-  normal:
-    black:   '#22262A'
-    red:     '#BF4052'
-    green:   '#00AF60'
-    yellow:  '#B57C65'
-    blue:    '#5A89AD'
-    magenta: '#8558C7'
-    cyan:    '#109191'
-    white:   '#808892'
-  # Bright colors.
-  bright:
-    black:   '#384048'
-    red:     '#E04F86'
-    green:   '#80D468'
-    yellow:  '#FFFFAF'
-    blue:    '#87B4E0'
-    magenta: '#D668E1'
-    cyan:    '#5BDDD0'
-    white:   '#F1E6D9'
 
 # Key bindings.
 key_bindings:
