@@ -26,7 +26,8 @@ Aliases and prompt.
 A script that automatically links each of the system's config files to the ones
 in this repository. Where possible, we make a system config file that simply
 sources this repo's config file. Where this is not possible, we symlink them. If
-those files already exist, this script does not overwrite them.
+those files already exist, this script does not overwrite them. Must be run from
+within this directory.
 
 ##### `install_notes.md`
 A brief outline of some common steps when performing a fresh install.
