@@ -147,11 +147,18 @@ In order for firefox to use the wayland backend, it may be necessary to add
 When developing with python, I typically use the Anaconda distribution,
 available at <https://www.anaconda.com/products/individual>.
 
-### LaTeX and Pandoc
+### LaTeX, Pandoc and other writing tools
 I often use LaTeX for academic writing, and for its PDF capabilities when
 combined with Pandoc. I default to the TeXLive distribution:
 ```bash
 sudo apt install texlive pandoc
+```
+
+Another very awesome tool is Patat, which uses Pandoc to create presentations
+from within the terminal. Patat can even display images (through Kitty's `icat`
+kitten (Patat version >= 0.8.7) or through `w3m-img`).
+```bash
+sudo apt install patat
 ```
 
 ### Dropbox
