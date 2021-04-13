@@ -106,11 +106,20 @@ I've been experimenting with sway as my window manager:
 ```bash
 sudo apt install sway
 ```
-I use `wofi` as my application launcher for sway, and use `brightnessctl` to
+
+I use `wofi` as my application launcher for sway, `wl-clipboard` to manage the
+clipbaord, and `brightnessctl` to
 control backlight brightness:
 ```bash
-sudo apt install wofi brightnessctl
+sudo apt install wofi wl-clipboard brightnessctl
 ```
+In order to use `brightnessctl` is may be necessary to add myself to the `video`
+group:
+```bash
+sudo usermod -a -G video $LOGNAME
+```
+and then log out and back in.
+
 
 I typically configure my keyboard/mouse with sway on a per device basis, good
 options to know are:
