@@ -137,4 +137,7 @@
         font LiterationMono Nerd Font Bold Italic 11
     }
 
+# Autostart.
+exec dropbox start
+
 include /etc/sway/config.d/*
