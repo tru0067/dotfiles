@@ -108,10 +108,10 @@ sudo apt install sway
 ```
 
 I use `wofi` as my application launcher for sway, `wl-clipboard` to manage the
-clipbaord, and `brightnessctl` to
-control backlight brightness:
+clipboard, `grim` to take screenshots and `brightnessctl` to control backlight
+brightness:
 ```bash
-sudo apt install wofi wl-clipboard brightnessctl
+sudo apt install wofi wl-clipboard grim brightnessctl
 ```
 In order to use `brightnessctl` is may be necessary to add myself to the `video`
 group:

@@ -113,6 +113,11 @@
         bindsym $mod+equal resize grow width 40px
         bindsym $mod+underscore resize shrink height 20px
         bindsym $mod+plus resize grow height 20px
+    # Screenshots:
+        bindsym $mod+p exec grim - | wl-copy
+        bindsym $mod+Shift+p exec grim ~/Pictures/$(date +screenshot-%Y%m%dT%H%M%S)
+        # TODO: Add region screeenshots with slurp? Window screenshots with
+        #       swaymsg and jq?
     # Volume buttons:
         bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
         bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -122,6 +127,10 @@
         bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
         bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
+# Bluetooth:
+    # TODO: Bluetooth management. I like using just bluetoothctl, but having to
+    #       do it manually everytime is a bit of a drag.
+
 # Borders:
     # Default borders.
     default_border pixel 1
@@ -130,10 +139,6 @@
     client.focused          #5A89AD #5A89AD #F1E6D9 #00AF60 #5A89AD
     client.focused_inactive #1C1C1C #1C1C1C #808892 #1C1C1C #1C1C1C
     client.unfocused        #1C1C1C #1C1C1C #808892 #1C1C1C #1C1C1C
-
-# Bluetooth:
-    # TODO: Bluetooth management. I like using just bluetoothctl, but having to
-    #       do it manually everytime is a bit of a drag.
 
 # Status Bar:
     # Read `man 5 sway-bar` for more information about this section.
