@@ -131,6 +131,10 @@
     client.focused_inactive #1C1C1C #1C1C1C #808892 #1C1C1C #1C1C1C
     client.unfocused        #1C1C1C #1C1C1C #808892 #1C1C1C #1C1C1C
 
+# Bluetooth:
+    # TODO: Bluetooth management. I like using just bluetoothctl, but having to
+    #       do it manually everytime is a bit of a drag.
+
 # Status Bar:
     # Read `man 5 sway-bar` for more information about this section.
     bar {
