@@ -15,6 +15,24 @@
     #set $font JetBrainsMono Nerd Font Bold Italic 11
     set $font LiterationMono Nerd Font Bold Italic 11
 
+# System control:
+    bindsym $mod+Shift+x exec swaynag -t warning -m "What do!?" \
+        -b "Shutdown" "systemctl poweroff" \
+        -b "Reboot" "systemctl reboot" \
+        -b "Hibernate" "systemctl hibernate" \
+        -b "Suspend" "systemctl suspend" \
+        -b "Logout" "swaymsg exit" \
+        -s "Nothing" \
+        --font "$font" \
+        --background "#1C1C1C" \
+        --text "#F1E6D9" \
+        --button-background "#384048" \
+        --border "#808892" \
+        --border-bottom-size 0 \
+        --button-border-size 1 \
+        --message-padding 5 \
+        --button-padding 3
+
 # Key bindings:
     # Basics:
         # Start a terminal.
@@ -30,8 +48,6 @@
         floating_modifier $mod normal
         # Reload the configuration file.
         bindsym $mod+Shift+c reload
-        # Exit sway (logs you out of your Wayland session).
-        bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
     # Moving around:
         # Move your focus.
         bindsym $mod+$left focus left
