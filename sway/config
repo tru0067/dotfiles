@@ -122,10 +122,9 @@
         # Select from a menu listing paired devices.
         bindsym $mod+o exec bluetoothctl paired-devices | \
             wofi --show dmenu --prompt "Bluetooth devices" \
-                --cache-file="/dev/null" | \
-            awk '{print $2}' | \
-            xargs bluetoothctl connect
-        # TODO: It would be nice to have some feedback from this.
+                --cache-file=/dev/null | \
+            awk '{print $2}' | xargs bluetoothctl connect | wofi --show dmenu
+        # TODO: It would be nice to have some better feedback from this.
     # Volume buttons:
         bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
         bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
