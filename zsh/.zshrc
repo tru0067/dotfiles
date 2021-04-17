@@ -51,4 +51,5 @@ bindkey '^[[3;5~' kill-word            # Let CTRL+DELETE delete the next word.
 alias ls="ls -v --color=auto --group-directories-first"
 alias ll="ls -al --si --time-style=long-iso"
 alias grep="grep --color=auto"
+alias tree="tree -v -C --dirsfirst"
 alias vim="nvim"
