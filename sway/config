@@ -118,6 +118,14 @@
         bindsym $mod+Shift+p exec grim ~/Pictures/$(date +screenshot-%Y%m%dT%H%M%S.png)
         # TODO: Add region screeenshots with slurp? Window screenshots with
         #       swaymsg and jq?
+    # Bluetooth:
+        # Select from a menu listing paired devices.
+        bindsym $mod+o exec bluetoothctl paired-devices | \
+            wofi --show dmenu --prompt "Bluetooth devices" \
+                --cache-file="/dev/null" | \
+            awk '{print $2}' | \
+            xargs bluetoothctl connect
+        # TODO: It would be nice to have some feedback from this.
     # Volume buttons:
         bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
         bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -126,10 +134,6 @@
     # Brightness buttons:
         bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
         bindsym XF86MonBrightnessUp exec brightnessctl set +5%
-
-# Bluetooth:
-    # TODO: Bluetooth management. I like using just bluetoothctl, but having to
-    #       do it manually everytime is a bit of a drag.
 
 # Borders:
     # Default borders.
