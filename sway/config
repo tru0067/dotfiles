@@ -10,21 +10,17 @@
     set $down j
     set $up k
     set $right l
-    # Terminal emulator.
-    set $term alacritty
-    # Application launcher.
-    set $menu wofi -i --show drun | xargs swaymsg exec --
 
 # Key bindings:
     # Basics:
         # Start a terminal.
-        bindsym $mod+Return exec $term
+        bindsym $mod+Return exec alacritty
         # Start firefox.
         bindsym $mod+Backspace exec firefox
         # Kill focused window.
         bindsym $mod+Shift+q kill
         # Start your launcher.
-        bindsym $mod+r exec $menu
+        bindsym $mod+r exec wofi -i --show drun | xargs swaymsg exec --
         # Drag windows by holding down $mod and left mouse button.
         # Resize them with $mod and right mouse button.
         floating_modifier $mod normal
