@@ -115,7 +115,7 @@
         bindsym $mod+plus resize grow height 20px
     # Screenshots:
         bindsym $mod+p exec grim - | wl-copy
-        bindsym $mod+Shift+p exec grim ~/Pictures/$(date +screenshot-%Y%m%dT%H%M%S)
+        bindsym $mod+Shift+p exec grim ~/Pictures/$(date +screenshot-%Y%m%dT%H%M%S.png)
         # TODO: Add region screeenshots with slurp? Window screenshots with
         #       swaymsg and jq?
     # Volume buttons:
