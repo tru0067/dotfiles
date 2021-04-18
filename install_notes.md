@@ -121,8 +121,8 @@ sudo usermod -a -G video $LOGNAME
 and then log out and back in.
 
 
-I typically configure my keyboard/mouse with sway on a per device basis, good
-options to know are:
+I typically configure my inputs and outputs with sway on a per device basis,
+good options to know are:
 ```
 input <keyboard> {
     xkb_layout "tt"
@@ -137,6 +137,11 @@ The list of input devices can be obtained from within sway with:
 ```bash
 swaymsg -t get_inputs
 ```
+Another useful one-liner is:
+```
+output * bg $(find /path/to/wallpaper-directory -type f | shuf -n 1) fill
+```
+which sets a random wallpaper on every startup.
 
 In order for firefox to use the wayland backend, it may be necessary to add
 `MOZ_ENABLE_WAYLAND=1` to `~/.config/environment.d/envars.conf`.
