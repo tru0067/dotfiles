@@ -8,7 +8,7 @@ if [[ ! -f ~/.config/alacritty/alacritty.yml ]]; then
     printf "Adding skeleton ~/.config/alacritty/alacritty.yml\n"
 fi
 if [[ ! -f ~/.gitconfig ]]; then
-    printf "[include]\n\t${PWD}/git/.gitconfig\n" > ~/.gitconfig
+    printf "[include]\n\tpath = ${PWD}/git/.gitconfig\n" > ~/.gitconfig
     printf "Adding skeleton ~/.gitconfig\n"
 fi
 mkdir -p ~/.config/sway
