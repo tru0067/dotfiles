@@ -1,0 +1,2 @@
+[alias]
+	tree = log --graph --format=format:'%C(6)%h%C(reset) - %C(2)%ad%C(reset) %C(10)(%ar)%C(reset)%C(auto)%d%C(reset)%n          %s %C(dim 7)- %aN%C(reset)'

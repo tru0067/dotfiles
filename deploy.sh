@@ -7,6 +7,10 @@ if [[ ! -f ~/.config/alacritty/alacritty.yml ]]; then
     printf "import:\n  - ${PWD}/alacritty/alacritty.yml\n" > ~/.config/alacritty/alacritty.yml
     printf "Adding skeleton ~/.config/alacritty/alacritty.yml\n"
 fi
+if [[ ! -f ~/.gitconfig ]]; then
+    printf "[include]\n\t${PWD}/git/.gitconfig\n" > ~/.gitconfig
+    printf "Adding skeleton ~/.gitconfig\n"
+fi
 mkdir -p ~/.config/sway
 if [[ ! -f ~/.config/sway/config ]]; then
     printf "include ${PWD}/sway/config\n" > ~/.config/sway/config
