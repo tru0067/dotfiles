@@ -2,4 +2,4 @@
 	commit = 6
 
 [alias]
-	tree = log --graph --format=format:'%C(auto)%h%C(reset) - %C(2)%ad%C(reset) %C(10)(%ar)%C(reset)%C(auto)%d%C(reset)%n          %s %C(dim 7)- %aN%C(reset)'
+	tree = log --graph --format=format:'%C(auto)%h%C(reset) - %C(2)%ad%C(reset) %C(10)(%ar)%C(reset)%C(auto)%d%C(reset)%n          %s %C(dim 7)- %aN%C(reset)%n'
