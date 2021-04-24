@@ -54,6 +54,10 @@ bindkey '^F' history-incremental-pattern-search-backward
 bindkey '^N' history-beginning-search-backward
 # Let Ctrl-P expand the current line by searching forward through the history.
 bindkey '^P' history-beginning-search-forward
+# Let Ctrl-K delete the rest of the current line.
+bindkey '^K' kill-line
+# Let Ctrl-U delete the current line.
+bindkey '^U' kill-whole-line
 
 # Aliases.
 alias ls="ls -v --color=auto --group-directories-first"
