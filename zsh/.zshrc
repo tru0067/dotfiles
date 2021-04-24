@@ -44,8 +44,16 @@ zle -N zle-keymap-select
 zle -N zle-line-init
 
 # Keybindings.
-bindkey '^H' backward-kill-word        # Let CTRL+BACKSPACE delete the previous word.
-bindkey '^[[3;5~' kill-word            # Let CTRL+DELETE delete the next word.
+# Let Ctrl-Backspace delete the previous word.
+bindkey '^H' backward-kill-word
+# Let Ctrl-Delete delete the next word.
+bindkey '^[[3;5~' kill-word
+# Let Ctrl-F search through the history.
+bindkey '^F' history-incremental-pattern-search-backward
+# Let Ctrl-N expand the current line by searching backward through the history.
+bindkey '^N' history-beginning-search-backward
+# Let Ctrl-P expand the current line by searching forward through the history.
+bindkey '^P' history-beginning-search-forward
 
 # Aliases.
 alias ls="ls -v --color=auto --group-directories-first"
