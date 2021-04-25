@@ -156,7 +156,7 @@ available at <https://www.anaconda.com/products/individual>.
 I often use LaTeX for academic writing, and for its PDF capabilities when
 combined with Pandoc. I default to the TeXLive distribution:
 ```bash
-sudo apt install texlive pandoc
+sudo apt install texlive texlive-latex-extra pandoc
 ```
 
 Another very awesome tool is Patat, which uses Pandoc to create presentations
