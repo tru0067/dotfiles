@@ -49,6 +49,12 @@ set listchars+=precedes:<              " Text preceding past start of window.
 " Bindings.
 " Y yanks to end of line (consistent with D and C).
 nnoremap Y y$
+" Let Ctrl-W delete the previous WORD.
+inoremap <C-W> <C-\><C-O>dB
+" Let Ctrl-Backspace delete the previous word.
+inoremap <C-H> <C-\><C-O>db
+" Let Ctrl-Delete delete the next word.
+inoremap <C-Del> <C-\><C-O>dw
 let mapleader=" "
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
