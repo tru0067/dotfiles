@@ -11,9 +11,9 @@
     set $up k
     set $right l
     # Font.
-    #set $font BlexMono Nerd Font Bold Italic 11
-    #set $font JetBrainsMono Nerd Font Bold Italic 11
-    set $font LiterationMono Nerd Font Bold Italic 11
+    #set $font BlexMono Nerd Font Bold Italic 12.5
+    #set $font JetBrainsMono Nerd Font Bold Italic 12.5
+    set $font LiterationMono Nerd Font Bold Italic 12.5
 
 # System control:
     bindsym $mod+Shift+x exec swaynag -t warning -m "What do!?" \
