@@ -12,12 +12,15 @@ set noerrorbells visualbell t_vb=      " No beeps or flashes.
 set backspace=indent,eol,start         " Allow backspace to behave as expected.
 set clipboard=unnamedplus              " Set clipboard to unnamed to access the system clipboard.
 set mouse=a                            " Allow usage of the mouse.
+" Formatting behaviour.
+set textwidth=80                       " Use a text width of 80 characters.
 set autoindent                         " Allow autoindentation.
+set nojoinspaces                       " Only insert only one space when joining lines.
+" Tab behaviour.
 set tabstop=8                          " Display real tabs as 8 spaces.
 set softtabstop=4                      " Insert up to 4 spaces when tab is pressed.
 set shiftwidth=4                       " Use 4 spaces for autoindentation and for >>, << and ==.
 set expandtab                          " Convert tabs to spaces.
-set textwidth=80                       " Use a text width of 80 characters.
 " Visual settings.
 set number                             " Show line numbers.
 set relativenumber                     " Show relative line numbers.
@@ -26,7 +29,7 @@ set scrolloff=8                        " Keep 8 lines on screen while scrolling.
 set sidescrolloff=8                    " Keep 8 columns on screen while scrolling.
 set nowrap                             " Do not visually wrap long lines.
 set showmatch                          " Highlight matching parenthesis.
-set colorcolumn=80                     " Put a 80 character column line.
+set colorcolumn=81                     " Put a column line just after 80 characters.
 " Command line.
 set showmode                           " Show the current mode.
 set laststatus=2                       " Always show the status line.
