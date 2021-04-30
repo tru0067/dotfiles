@@ -35,10 +35,12 @@
 
 # Key bindings:
     # Basics:
-        # Start a terminal.
-        bindsym $mod+Return exec alacritty
         # Start firefox.
         bindsym $mod+Backspace exec firefox
+        # Start file manager.
+        bindsym $mod+Delete exec pcmanfm
+        # Start a terminal.
+        bindsym $mod+Return exec alacritty
         # Kill focused window.
         bindsym $mod+Shift+q kill
         # Start your launcher.
