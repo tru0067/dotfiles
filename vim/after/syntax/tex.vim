@@ -1,5 +1,6 @@
 " Define some new math zones. See `:help tex-math`.
 call TexNewMathZone("M", "align", 1)
+call TexNewMathZone("N", "gather", 1)
 
 " Redefine some highlighting groups.
 hi! link Delimiter Function
