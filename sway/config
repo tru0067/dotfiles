@@ -121,12 +121,11 @@
         # TODO: Add region screeenshots with slurp? Window screenshots with
         #       swaymsg and jq?
     # Bluetooth:
-        # Select from a menu listing paired devices.
-        bindsym $mod+o exec bluetoothctl paired-devices | \
-            wofi --show dmenu --prompt "Bluetooth devices" \
-                --cache-file=/dev/null | \
-            awk '{print $2}' | xargs bluetoothctl connect | wofi --show dmenu
-        # TODO: It would be nice to have some better feedback from this.
+        # Open up a bluetooth manager.
+        for_window [app_id="blueman-manager"] floating enable
+        for_window [app_id="blueman-manager"] resize set height 50 ppt
+        for_window [app_id="blueman-manager"] border none
+        bindsym $mod+o exec blueman-manager
     # Volume buttons:
         bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
         bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
