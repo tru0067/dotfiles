@@ -29,10 +29,6 @@ if [[ ! -f ~/.config/nvim/init.vim ]]; then
     printf "source ${PWD}/vim/init.vim\n" > ~/.config/nvim/init.vim
     printf "Adding skeleton ~/.config/nvim/init.vim\n"
 fi
-if [[ ! -f ~/.config/nvim/filetype.vim ]]; then
-    printf "source ${PWD}/vim/filetype.vim\n" > ~/.config/nvim/filetype.vim
-    printf "Adding skeleton ~/.config/nvim/filetype.vim\n"
-fi
 if [[ ! -f ~/.zshrc ]]; then
     printf "source ${PWD}/zsh/.zshrc\n" > ~/.zshrc
     printf "Adding skeleton ~/.zshrc\n"
