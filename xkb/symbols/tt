@@ -52,13 +52,18 @@ xkb_symbols "modded" {
     key <AB08> {[        comma, less            ]};
     key <AB09> {[       period, greater         ]};
     key <AB10> {[        slash, question        ]};
+    key <RTSH> {[    backslash, bar             ]};
 
-    // Altered keys.
-    key <BKSL> {[    Delete ]};
-    key <RTSH> {[ backslash,    bar             ]};
-    key <CAPS> {[ Control_L ]};
-    key <LCTL> {[    Escape ]};
-    key <ESC>  {[     grave,    asciitilde      ]};
+    key <ESC>  {[    Caps_Lock                  ]};
 
-    modifier_map Control { <CAPS> };
+    key <BKSL> {[       Delete                  ]};
+
+    key <CAPS> {[    Control_L                  ]};
+
+    key <LCTL> {[       Escape                  ]};
+    key <LWIN> {[        Alt_L, Meta_L          ]};
+    key <LALT> {
+        type[Group1] = "ONE_LEVEL",
+        symbols[Group1] =
+                [      Super_L                  ]};
 };
