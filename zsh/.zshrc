@@ -19,11 +19,33 @@ setopt prompt_subst
 zstyle ':vcs_info:git:*' formats '%F{6}(%b)%f' # "{branch name}".
 zstyle ':vcs_info:*' enable git
 
+# Duration of last command.
+function preexec () {
+    cmd_start_time=$(date +%s%3N)
+}
+function precmd () {
+    if [ ${cmd_start_time} ]; then
+        local ms=$(($(date +%s%3N) - ${cmd_start_time}))
+        local s=$((ms / 1000))
+        local m=$((ms / 60000))
+        local h=$((ms / 360000))
+        if   ((h > 0)); then cmd_duration=${h}h$((m % 60))m$((s % 60))s
+        elif ((m > 0)); then cmd_duration=${m}m$((s % 60))s
+        elif ((s > 9)); then cmd_duration=${s}.$(printf %02d $(((ms % 1000) / 10)))s
+        elif ((s > 0)); then cmd_duration=${s}.$(printf %03d $((ms % 1000)))s
+        else cmd_duration=${ms}ms
+        fi
+        unset cmd_start_time
+    else
+        unset cmd_duration
+    fi
+}
+
 # Prompt settings.
 # "{username}@{machine name}:{currect directory} ({vcs info}) ".
 PROMPT='%F{2}%n@%M%f:%F{4}%~%f${vcs_info_msg_0_} '
-# "[{exit status}] {time}"
-RPROMPT='%F{7}[%?] %T%f'
+# "({command duration}) [{exit status}] {time}"
+RPROMPT='%F{7}$(if [ ${cmd_duration} ]; then echo "(${cmd_duration}) "; fi)[%?] %T%f'
 
 # Command line vi mode settings.
 bindkey -v                             # Use vi keybindings for editing the command line.
