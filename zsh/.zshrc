@@ -28,7 +28,7 @@ function precmd () {
         local ms=$(($(date +%s%3N) - ${cmd_start_time}))
         local s=$((ms / 1000))
         local m=$((ms / 60000))
-        local h=$((ms / 360000))
+        local h=$((ms / 3600000))
         if   ((h > 0)); then cmd_duration=${h}h$((m % 60))m$((s % 60))s
         elif ((m > 0)); then cmd_duration=${m}m$((s % 60))s
         elif ((s > 9)); then cmd_duration=${s}.$(printf %02d $(((ms % 1000) / 10)))s
