@@ -38,9 +38,9 @@ let g:currentmode={
     \ 't'    : 'Terminal'
     \}
 "<mode> <filename> <flags>
-set statusline=%4*\ %{currentmode[mode(1)]}\ %2*\ %f%(\ %m%q%h%w%r%)\ %1*
+set statusline=%4*\ %{currentmode[mode(1)]}\ %2*\ %f\ %1*\ %m%q%h%w%r
 "<filetype> <percentage through file> <line:column>
-set statusline+=%=%2*\ %y\ %p%%\ %l:%c\ 
+set statusline+=%=%y\ %2*\ %p%%\ %l:%c\ 
 
 " Bindings.
 " Get the highlight group of the text under the cursor.
