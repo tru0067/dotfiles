@@ -1,3 +1,5 @@
+[core]
+	pager = less --mouse
 [color "diff"]
 	commit = 6
 
