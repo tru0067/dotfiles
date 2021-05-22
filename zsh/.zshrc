@@ -10,6 +10,7 @@ unsetopt beep                          # Don't beep.
 # Setting defaults.
 export EDITOR="nvim"                   # Set neovim as default editor.
 export VISUAL="nvim"
+eval "$(dircolors -b)"                 # Set the LS_COLORS variable.
 
 # Git integration.
 autoload -Uz vcs_info
@@ -84,5 +85,6 @@ bindkey '^U' kill-whole-line
 # Aliases.
 alias ls="ls -v --color=auto --group-directories-first"
 alias ll="ls -al --si --time-style=long-iso"
+alias diff="diff --color=auto"
 alias grep="grep --color=auto"
-alias tree="tree -v -C --dirsfirst"
+alias tree="tree -v --dirsfirst"
