@@ -4,13 +4,13 @@
 
 ### Git
 First and foremost, I'll need git:
-```bash
+```sh
 sudo apt install git
 ```
 I'll probably want to set up a personal access token for this machine. I also
 like to use a remote url that contains my username, as this makes it easy to
 manage multiple accounts, along with storing my credentials:
-```bash
+```sh
 # Clone with username in url.
 git clone https://tru0067@github.com/tru0067/dotfiles.git
 # Add remote url with username (e.g. when making a new repo).
@@ -24,31 +24,31 @@ git config credential.helper store
 ### Alacritty
 Alacritty is not as of yet in the official ubuntu repos. Thus I intall it from
 the popOS PPA:
-```bash
+```sh
 sudo add-apt-repository ppa:mmstick76/alacritty
 sudo apt-get update
 sudo apt install alacritty
 ```
 I'll then want to make alacritty my default terminal emulator (this may not be
 necessary, but good to know how to do):
-```bash
+```sh
 sudo update-alternatives --config x-terminal-emulator
 ```
 
 ### Zsh
 My shell of choice:
-```bash
+```sh
 sudo apt install zsh
 ```
 I should then set it to be the default:
-```bash
+```sh
 chsh --shell /usr/bin/zsh
 ```
 I need to logout and log back in again for that change to occur.
 
 ### Neovim
 My editor of choice is neovim:
-```bash
+```sh
 sudo apt install neovim
 ```
 
@@ -69,7 +69,7 @@ work with sway? Does PCManFM play nice in wayland?
 I'm partial to the Literation Nerd Font family. As well as Blex and JetBrains.
 TODO: Figure out a way of making these install friendly.
 After installing them, make sure to refresh the font cache:
-```bash
+```sh
 fc-cache -f
 ```
 
@@ -92,7 +92,7 @@ available at <https://github.com/PapirusDevelopmentTeam/papirus-icon-theme>.
 ### xkb
 I use a custom xkb keyboard layout. This can be enabled by first linking my
 layout:
-```bash
+```sh
 sudo ln --symbolic ~/dotfiles/xkb/symbols/tt /usr/share/X11/xkb/symbols
 ```
 and then by copying the contents of `xkb/evdev.xml` into
@@ -103,19 +103,19 @@ keyboard layout can be selected.
 
 ### Sway
 I've been experimenting with sway as my window manager:
-```bash
+```sh
 sudo apt install sway
 ```
 
 I use `wofi` as my application launcher for sway, `wl-clipboard` to manage the
 clipboard, `grim` to take screenshots, `brightnessctl` to control backlight
 brightness and `blueman` to manage my bluetooth devices:
-```bash
+```sh
 sudo apt install wofi wl-clipboard grim brightnessctl blueman
 ```
 In order to use `brightnessctl` is may be necessary to add myself to the `video`
 group:
-```bash
+```sh
 sudo usermod -a -G video $LOGNAME
 ```
 and then log out and back in.
@@ -134,7 +134,7 @@ input <touchpad> {
 }
 ```
 The list of input devices can be obtained from within sway with:
-```bash
+```sh
 swaymsg -t get_inputs
 ```
 Another useful one-liner is:
@@ -152,27 +152,27 @@ In order for firefox to use the wayland backend, it may be necessary to add
 When developing with python, I typically use the Anaconda distribution,
 available at <https://www.anaconda.com/products/individual>.
 
-Some aspects of Anaconda work by modifying `.bashrc`, in order for those parts
+Some aspects of Anaconda work by modifying `.shrc`, in order for those parts
 to work with `zsh` run:
-```bash
+```sh
 conda init zsh
 ```
 To disable Anaconda from changing the prompt run:
-```bash
+```sh
 conda config --set changeps1 False
 ```
 
 ### LaTeX, Pandoc and other writing tools
 I often use LaTeX for academic writing, and for its PDF capabilities when
 combined with Pandoc. I default to the TeXLive distribution:
-```bash
+```sh
 sudo apt install texlive texlive-latex-extra pandoc
 ```
 
 Another very awesome tool is Patat, which uses Pandoc to create presentations
 from within the terminal. Patat can even display images (through Kitty's `icat`
 kitten (Patat version >= 0.8.7) or through `w3m-img`).
-```bash
+```sh
 sudo apt install patat
 ```
 
