@@ -152,6 +152,16 @@ In order for firefox to use the wayland backend, it may be necessary to add
 When developing with python, I typically use the Anaconda distribution,
 available at <https://www.anaconda.com/products/individual>.
 
+Some aspects of Anaconda work by modifying `.bashrc`, in order for those parts
+to work with `zsh` run:
+```bash
+conda init zsh
+```
+To disable Anaconda from changing the prompt run:
+```bash
+conda config --set changeps1 False
+```
+
 ### LaTeX, Pandoc and other writing tools
 I often use LaTeX for academic writing, and for its PDF capabilities when
 combined with Pandoc. I default to the TeXLive distribution:
