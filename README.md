@@ -13,8 +13,7 @@ All my window manager config.
 
 ##### `vim/`
 A bare minimum `.vimrc` as well as my `init.vim`. Also contains my custom syntax
-and filetype rules. For my vim colorscheme see
-<https://github.com/tru0067/verdurous>.
+rules. For my vim colorscheme see <https://github.com/tru0067/verdurous>.
 
 ##### `xkb/`
 My custom keyboard layout.
