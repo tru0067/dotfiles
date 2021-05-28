@@ -63,8 +63,6 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>e :Lex<CR>
-nnoremap <silent><leader>= :vertical resize +5<CR>
-nnoremap <silent><leader>- :vertical resize -5<CR>
 
 " File explorer.
 let g:netrw_browse_split=2             " Open from netrw in new vsplit.
