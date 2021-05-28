@@ -39,6 +39,7 @@ A brief outline of some common steps when performing a fresh install.
 -   Configure NeoVim
     -   TreeSitter
     -   Built-in LSP
+    -   Snippets
     -   LaTeX/markdown plugins
         -   Language injection with TreeSitter?
     -   Refactor makeprg's into compiler scripts
