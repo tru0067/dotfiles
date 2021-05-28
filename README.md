@@ -32,8 +32,10 @@ within this directory.
 A brief outline of some common steps when performing a fresh install.
 
 ### TODO
--   Change sway status bar to `waybar`
--   Set up sway idle/lock
+-   Sway
+    -   Change sway status bar to `waybar`
+    -   Set up sway idle/lock
+    -   Dismiss logout menu after action
 -   Change terminal emulator to `kitty`
     -   Underline and images
     -   Want to check battery performance though
