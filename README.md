@@ -30,3 +30,15 @@ within this directory.
 
 ##### `install_notes.md`
 A brief outline of some common steps when performing a fresh install.
+
+### TODO
+-   Change sway status bar to `waybar`
+-   Change terminal emulator to `kitty`
+    -   Underline and images
+    -   Want to check battery performance though
+-   Configure NeoVim
+    -   TreeSitter
+    -   Built-in LSP
+    -   LaTeX/markdown plugins
+        -   Language injection with TreeSitter?
+    -   Refactor makeprg's into compiler scripts
