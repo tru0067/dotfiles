@@ -19,8 +19,8 @@
     bindsym $mod+Shift+x exec swaynag -t warning -m "What do!?" \
         -b "Shutdown" "systemctl poweroff" \
         -b "Reboot" "systemctl reboot" \
-        -b "Hibernate" "systemctl hibernate" \
-        -b "Suspend" "systemctl suspend" \
+        -b "Hibernate" "systemctl hibernate; killall swaynag" \
+        -b "Suspend" "systemctl suspend; killall swaynag" \
         -b "Logout" "swaymsg exit" \
         -s "Nothing" \
         --font "$font" \
@@ -32,6 +32,8 @@
         --button-border-size 1 \
         --message-padding 5 \
         --button-padding 3
+        # If I start using several swaynag prompts, a lot of these settings can
+        # be placed into the swaynag config file. See `man 5 swaynag`.
 
 # Key bindings:
     # Basics:
