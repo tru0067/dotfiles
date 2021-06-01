@@ -52,6 +52,9 @@ My editor of choice is neovim:
 sudo apt install neovim
 ```
 
+For Neovim I use `vim-plug` to manage my plugins, available at:
+<https://github.com/junegunn/vim-plug>.
+
 TODO: I think I want to build it from source at some point.
 
 ### PCManFM
