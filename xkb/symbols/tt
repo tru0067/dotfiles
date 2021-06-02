@@ -16,7 +16,9 @@ xkb_symbols "modded" {
     key <AE10> {[            0, parenright      ]};
     key <AE11> {[        minus, underscore      ]};
     key <AE12> {[        equal, plus            ]};
+    key <BKSP> {[    BackSpace                  ], type[Group1] = "ONE_LEVEL"};
 
+    key <TAB>  {[          Tab                  ], type[Group1] = "ONE_LEVEL"};
     key <AD01> {[            q, Q               ]};
     key <AD02> {[            w, W               ]};
     key <AD03> {[            e, E               ]};
@@ -27,9 +29,11 @@ xkb_symbols "modded" {
     key <AD08> {[            i, I               ]};
     key <AD09> {[            o, O               ]};
     key <AD10> {[            p, P               ]};
-    key <AD11> {[  bracketleft, braceleft      ]};
+    key <AD11> {[  bracketleft, braceleft       ]};
     key <AD12> {[ bracketright, braceright      ]};
+    key <BKSL> {[       Delete                  ], type[Group1] = "ONE_LEVEL"};
 
+    key <CAPS> {[    Control_L                  ], type[Group1] = "ONE_LEVEL"};
     key <AC01> {[            a, A               ]};
     key <AC02> {[            s, S               ]};
     key <AC03> {[            d, D               ]};
@@ -41,7 +45,9 @@ xkb_symbols "modded" {
     key <AC09> {[            l, L               ]};
     key <AC10> {[    semicolon, colon           ]};
     key <AC11> {[   apostrophe, quotedbl        ]};
+    key <RTRN> {[       Return                  ], type[Group1] = "ONE_LEVEL"};
 
+    key <LFSH> {[      Shift_L                  ], type[Group1] = "ONE_LEVEL"};
     key <AB01> {[            z, Z               ]};
     key <AB02> {[            x, X               ]};
     key <AB03> {[            c, C               ]};
@@ -54,16 +60,9 @@ xkb_symbols "modded" {
     key <AB10> {[        slash, question        ]};
     key <RTSH> {[    backslash, bar             ]};
 
-    key <ESC>  {[    Caps_Lock                  ]};
+    key <ESC>  {[    Caps_Lock                  ], type[Group1] = "ONE_LEVEL"};
 
-    key <BKSL> {[       Delete                  ]};
-
-    key <CAPS> {[    Control_L                  ]};
-
-    key <LCTL> {[       Escape                  ]};
-    key <LWIN> {[        Alt_L, Meta_L          ]};
-    key <LALT> {
-        type[Group1] = "ONE_LEVEL",
-        symbols[Group1] =
-                [      Super_L                  ]};
+    key <LCTL> {[       Escape                  ], type[Group1] = "ONE_LEVEL"};
+    key <LWIN> {[        Alt_L, Meta_L          ], type[Group1] = "TWO_LEVEL"};
+    key <LALT> {[      Super_L                  ], type[Group1] = "ONE_LEVEL"};
 };
