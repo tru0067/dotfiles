@@ -6,7 +6,7 @@ colorscheme verdurous-dark
 
 " Plugins
 call plug#begin()
-"Plug 'JuliaEditorSupport/julia-vim'
+Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
 
 " Statusline.
