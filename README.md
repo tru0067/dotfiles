@@ -47,3 +47,6 @@ A brief outline of some common steps when performing a fresh install.
         -   Language injection with TreeSitter?
     -   Refactor makeprg's into compiler scripts
         -   Along with error format?
+-   xkb
+    -   Once I install my split space bar I can probably remove my MENU key
+        mapping
