@@ -45,3 +45,9 @@ add the following into `/usr/share/X11/xkb/rules/evdev.xml`:
 ```
 (The comment parts are not needed, but provide a good indicator of where to put
 this.)
+
+Additionally, I will need to add `symbols/tt` into `/usr/share/X11/xkb/symbols`,
+this is probably easiest with a symlink:
+```sh
+sudo ln -s ~/dotfiles/xkb/symbols/tt /usr/share/X11/xkb/symbols/tt
+```
