@@ -21,7 +21,7 @@ xkb_symbols "modded" {
     key <TAB>  { [          Tab               ], type[Group1] = "ONE_LEVEL" };
     key <AD01> { [            q, Q            ] };
     key <AD02> { [            w, W            ] };
-    key <AD03> { [            e, E,                    U03F5, Greek_EPSILON ] }; // Greek_epsilon
+    key <AD03> { [            e, E,                    U03F5, Greek_EPSILON,      NoSymbol, NoSymbol,      Greek_epsilon, NoSymbol      ], type[Group1] = "EIGHT_LEVEL" };
     key <AD04> { [            r, R,                Greek_rho, Greek_RHO     ] };
     key <AD05> { [            t, T,                Greek_tau, Greek_TAU     ] };
     key <AD06> { [            y, Y,            Greek_upsilon, Greek_UPSILON ] };
@@ -35,9 +35,9 @@ xkb_symbols "modded" {
 
     key <CAPS> { [    Control_L               ], type[Group1] = "ONE_LEVEL" };
     key <AC01> { [            a, A,              Greek_alpha, Greek_ALPHA   ] };
-    key <AC02> { [            s, S,              Greek_sigma, Greek_SIGMA   ] }; // Greek_finalsmallsigma
+    key <AC02> { [            s, S,              Greek_sigma, Greek_SIGMA,        NoSymbol, NoSymbol, Greek_finalsmallsigma, NoSymbol   ], type[Group1] = "EIGHT_LEVEL" };
     key <AC03> { [            d, D,              Greek_delta, Greek_DELTA   ] };
-    key <AC04> { [            f, F,                    U03D5, Greek_PHI     ] }; // Greek_phi
+    key <AC04> { [            f, F,                    U03D5, Greek_PHI,          NoSymbol, NoSymbol,          Greek_phi, NoSymbol      ], type[Group1] = "EIGHT_LEVEL" };
     key <AC05> { [            g, G,              Greek_gamma, Greek_GAMMA   ] };
     key <AC06> { [            h, H,                Greek_eta, Greek_ETA     ] };
     key <AC07> { [            j, J,                 Greek_xi, Greek_XI      ] };
@@ -66,6 +66,9 @@ xkb_symbols "modded" {
     key <LCTL> { [       Escape               ], type[Group1] = "ONE_LEVEL" };
     key <LWIN> { [        Alt_L, Meta_L       ], type[Group1] = "TWO_LEVEL" };
     key <LALT> { [      Super_L               ], type[Group1] = "ONE_LEVEL" };
+    key <RALT> { [ ISO_Level5_Shift           ], type[Group1] = "ONE_LEVEL" };
+    key <MENU> { [ ISO_Level5_Shift           ], type[Group1] = "ONE_LEVEL" };
 
     include "level3(modifier_mapping)"
+    include "level5(modifier_mapping)"
 };
