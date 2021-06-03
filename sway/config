@@ -40,7 +40,7 @@
         # Start firefox.
         bindsym $mod+Backspace exec firefox
         # Start file manager.
-        bindsym $mod+Delete exec pcmanfm
+        bindsym $mod+backslash exec pcmanfm
         # Start a terminal.
         bindsym $mod+Return exec alacritty
         # Kill focused window.
