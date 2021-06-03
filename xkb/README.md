@@ -17,3 +17,31 @@ This is the layout of my keyboard!
 │ Escape  │ Alt     │ Super   │                      Space                      │         │         │         │         │
 └─────────┴─────────┴─────────┴─────────────────────────────────────────────────┴─────────┴─────────┴─────────┴─────────┘
 ```
+
+In order for this keyboard layout to appear in some system lists I will have to
+add the following into `/usr/share/X11/xkb/rules/evdev.xml`:
+```xml
+<!--</layout>-->
+    <layout>
+      <configItem>
+        <name>tt</name>
+        <!-- Thomas Truman's Custom Keyboard Layout -->
+        <shortDescription>tt</shortDescription>
+        <description>English (TT)</description>
+        <languageList>
+          <iso639Id>eng</iso639Id>
+        </languageList>
+      </configItem>
+      <variantList>
+       <variant>
+         <configItem>
+           <name>modded</name>
+           <description>English (TT, Modded)</description>
+         </configItem>
+       </variant>
+      </variantList>
+    </layout>
+<!--</layoutList>-->
+```
+(The comment parts are not needed, but provide a good indicator of where to put
+this.)
