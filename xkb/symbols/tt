@@ -35,8 +35,8 @@ xkb_symbols "modded" {
 
     key <CAPS> { [    Control_L               ], type[Group1] = "ONE_LEVEL" };
     key <AC01> { [            a, A,           U03B1, U0391 ] };
-    key <AC02> { [            s, S,           U03C3, U03A3, NoSymbol, NoSymbol, U03C2, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
-    key <AC03> { [            d, D,           U03B4, U0394 ] };
+    key <AC02> { [            s, S,           U03C3, U03A3, NoSymbol, NoSymbol, U03C2, U222B    ], type[Group1] = "EIGHT_LEVEL" };
+    key <AC03> { [            d, D,           U03B4, U0394, NoSymbol, NoSymbol, U2202, U2207    ], type[Group1] = "EIGHT_LEVEL" };
     key <AC04> { [            f, F,           U03D5, U03A6, NoSymbol, NoSymbol, U03C6, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
     key <AC05> { [            g, G,           U03B3, U0393 ] };
     key <AC06> { [            h, H,           U03B7, U0397 ] };
