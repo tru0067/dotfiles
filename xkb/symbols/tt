@@ -4,7 +4,7 @@ xkb_symbols "modded" {
     name[Group1]= "English (TT)";
 
     key <TLDE> { [        grave, asciitilde,  NoSymbol, NoSymbol, NoSymbol, NoSymbol, U00AC, U223C ], type[Group1] = "EIGHT_LEVEL" };
-    key <AE01> { [            1, exclam       ] };
+    key <AE01> { [            1, exclam,      NoSymbol, U00A1,    NoSymbol, NoSymbol, NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
     key <AE02> { [            2, at           ] };
     key <AE03> { [            3, numbersign   ] };
     key <AE04> { [            4, dollar       ] };
@@ -57,7 +57,7 @@ xkb_symbols "modded" {
     key <AB07> { [            m, M,           U03BC, U039C ] };
     key <AB08> { [        comma, less,        NoSymbol, NoSymbol, NoSymbol, NoSymbol, U27E8, U2264 ], type[Group1] = "EIGHT_LEVEL" };
     key <AB09> { [       period, greater,     NoSymbol, NoSymbol, NoSymbol, NoSymbol, U27E9, U2265 ], type[Group1] = "EIGHT_LEVEL" };
-    key <AB10> { [        slash, question     ] };
+    key <AB10> { [        slash, question,    NoSymbol, U00BF,    NoSymbol, NoSymbol, NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
     key <RTSH> { [ ISO_Level3_Shift           ], type[Group1] = "ONE_LEVEL" };
 
     key <ESC>  { [    Caps_Lock               ], type[Group1] = "ONE_LEVEL" };
