@@ -24,11 +24,11 @@ xkb_symbols "modded" {
     key <AD03> { [            e, E,              U03F5, U0395,    NoSymbol, NoSymbol,    U03B5, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
     key <AD04> { [            r, R,              U03C1, U03A1 ] };
     key <AD05> { [            t, T,              U03C4, U03A4 ] };
-    key <AD06> { [            y, Y,              U03C5, U03A5 ] };
-    key <AD07> { [            u, U,              U03B8, U0398 ] };
-    key <AD08> { [            i, I,              U03B9, U0399 ] };
-    key <AD09> { [            o, O,              U03BF, U039F ] };
-    key <AD10> { [            p, P,              U03C0, U03A0 ] };
+    key <AD06> { [            y, Y,              U03C5, U03A5,       equal, equal,    NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
+    key <AD07> { [            u, U,              U03B8, U0398,        plus, plus,     NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
+    key <AD08> { [            i, I,              U03B9, U0399,       minus, minus,    NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
+    key <AD09> { [            o, O,              U03BF, U039F,    asterisk, asterisk, NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
+    key <AD10> { [            p, P,              U03C0, U03A0,       slash, slash,    NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
     key <AD11> { [  bracketleft, braceleft    ] };
     key <AD12> { [ bracketright, braceright   ] };
     key <BKSL> { [    backslash, bar          ] };
