@@ -39,10 +39,10 @@ xkb_symbols "modded" {
     key <AC03> { [            d, D,              U03B4, U0394,    NoSymbol, NoSymbol,    U2202, U2207    ], type[Group1] = "EIGHT_LEVEL" };
     key <AC04> { [            f, F,              U03D5, U03A6,    NoSymbol, NoSymbol,    U03C6, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
     key <AC05> { [            g, G,              U03B3, U0393 ] };
-    key <AC06> { [            h, H,              U03B7, U0397,        Left, Home,        U210F, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
-    key <AC07> { [            j, J,              U03BE, U039E,        Down, Next,     NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
-    key <AC08> { [            k, K,              U03BA, U039A,          Up, Prior,    NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
-    key <AC09> { [            l, L,              U03BB, U039B,       Right, End,      NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
+    key <AC06> { [            h, H,              U03B7, U0397,        Left, Left,        U210F, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
+    key <AC07> { [            j, J,              U03BE, U039E,        Down, Down,     NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
+    key <AC08> { [            k, K,              U03BA, U039A,          Up, Up,       NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
+    key <AC09> { [            l, L,              U03BB, U039B,       Right, Right,    NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
     key <AC10> { [    semicolon, colon        ] };
     key <AC11> { [   apostrophe, quotedbl     ] };
     key <RTRN> { [       Return               ], type[Group1] = "ONE_LEVEL" };
@@ -53,10 +53,10 @@ xkb_symbols "modded" {
     key <AB03> { [            c, C,              U03C8, U03A8 ] };
     key <AB04> { [            v, V,              U03C9, U03A9 ] };
     key <AB05> { [            b, B,              U03B2, U0392 ] };
-    key <AB06> { [            n, N,              U03BD, U039D ] };
-    key <AB07> { [            m, M,              U03BC, U039C ] };
-    key <AB08> { [        comma, less,        NoSymbol, NoSymbol, NoSymbol, NoSymbol,    U27E8, U2264    ], type[Group1] = "EIGHT_LEVEL" };
-    key <AB09> { [       period, greater,     NoSymbol, NoSymbol, NoSymbol, NoSymbol,    U27E9, U2265    ], type[Group1] = "EIGHT_LEVEL" };
+    key <AB06> { [            n, N,              U03BD, U039D,        Home, Home,     NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
+    key <AB07> { [            m, M,              U03BC, U039C,        Next, Next,     NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
+    key <AB08> { [        comma, less,        NoSymbol, NoSymbol,    Prior, Prior,       U27E8, U2264    ], type[Group1] = "EIGHT_LEVEL" };
+    key <AB09> { [       period, greater,     NoSymbol, NoSymbol,      End, End,         U27E9, U2265    ], type[Group1] = "EIGHT_LEVEL" };
     key <AB10> { [        slash, question,       U203D, U00BF,    NoSymbol, NoSymbol, NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
     key <RTSH> { [ ISO_Level3_Shift           ], type[Group1] = "ONE_LEVEL" };
 
