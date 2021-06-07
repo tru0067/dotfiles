@@ -39,10 +39,10 @@ xkb_symbols "modded" {
     key <AC03> { [            d, D,              U03B4, U0394,    NoSymbol, NoSymbol,    U2202, U2207    ], type[Group1] = "EIGHT_LEVEL" };
     key <AC04> { [            f, F,              U03D5, U03A6,    NoSymbol, NoSymbol,    U03C6, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
     key <AC05> { [            g, G,              U03B3, U0393 ] };
-    key <AC06> { [            h, H,              U03B7, U0397,    NoSymbol, NoSymbol,    U210F, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
-    key <AC07> { [            j, J,              U03BE, U039E ] };
-    key <AC08> { [            k, K,              U03BA, U039A ] };
-    key <AC09> { [            l, L,              U03BB, U039B ] };
+    key <AC06> { [            h, H,              U03B7, U0397,        Left, Home,        U210F, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
+    key <AC07> { [            j, J,              U03BE, U039E,        Down, Next,     NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
+    key <AC08> { [            k, K,              U03BA, U039A,          Up, Prior,    NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
+    key <AC09> { [            l, L,              U03BB, U039B,       Right, End,      NoSymbol, NoSymbol ], type[Group1] = "EIGHT_LEVEL" };
     key <AC10> { [    semicolon, colon        ] };
     key <AC11> { [   apostrophe, quotedbl     ] };
     key <RTRN> { [       Return               ], type[Group1] = "ONE_LEVEL" };

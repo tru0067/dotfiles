@@ -50,3 +50,5 @@ A brief outline of some common steps when performing a fresh install.
 -   xkb
     -   Once I install my split space bar I can probably remove my MENU key
         mapping
+    -   Figure out how to remove the modifiers from appearing as pressed for
+        levels 5 and 6
