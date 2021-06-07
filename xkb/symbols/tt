@@ -21,8 +21,8 @@ xkb_symbols "modded" {
     key <TAB>  { [          Tab               ], type[Group1] = "ONE_LEVEL" };
     key <AD01> { [            q, Q            ] };
     key <AD02> { [            w, W            ] };
-    key <AD03> { [            e, E,                   U03F5, U0395,            NoSymbol, NoSymbol,            U03B5, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
-    key <AD04> { [            r, R,                   U03C1, U03A1        ] };
+    key <AD03> { [            e, E,                   U03F5, U0395,         bracketleft, bracketleft,         U03B5, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
+    key <AD04> { [            r, R,                   U03C1, U03A1,        bracketright, bracketright,     NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
     key <AD05> { [            t, T,                   U03C4, U03A4        ] };
     key <AD06> { [            y, Y,                   U03C5, U03A5,               equal, equal,            NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
     key <AD07> { [            u, U,                   U03B8, U0398,                plus, plus,             NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
@@ -36,8 +36,8 @@ xkb_symbols "modded" {
     key <CAPS> { [    Control_L               ], type[Group1] = "ONE_LEVEL" };
     key <AC01> { [            a, A,                   U03B1, U0391        ] };
     key <AC02> { [            s, S,                   U03C3, U03A3,            NoSymbol, NoSymbol,            U03C2, U222B        ], type[Group1] = "EIGHT_LEVEL" };
-    key <AC03> { [            d, D,                   U03B4, U0394,            NoSymbol, NoSymbol,            U2202, U2207        ], type[Group1] = "EIGHT_LEVEL" };
-    key <AC04> { [            f, F,                   U03D5, U03A6,            NoSymbol, NoSymbol,            U03C6, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
+    key <AC03> { [            d, D,                   U03B4, U0394,           parenleft, parenleft,           U2202, U2207        ], type[Group1] = "EIGHT_LEVEL" };
+    key <AC04> { [            f, F,                   U03D5, U03A6,          parenright, parenright,          U03C6, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
     key <AC05> { [            g, G,                   U03B3, U0393        ] };
     key <AC06> { [            h, H,                   U03B7, U0397,                Left, Left,                U210F, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
     key <AC07> { [            j, J,                   U03BE, U039E,                Down, Down,             NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
@@ -50,8 +50,8 @@ xkb_symbols "modded" {
     key <LFSH> { [      Shift_L               ], type[Group1] = "ONE_LEVEL" };
     key <AB01> { [            z, Z,                   U03B6, U0396        ] };
     key <AB02> { [            x, X,                   U03C7, U03A7        ] };
-    key <AB03> { [            c, C,                   U03C8, U03A8        ] };
-    key <AB04> { [            v, V,                   U03C9, U03A9        ] };
+    key <AB03> { [            c, C,                   U03C8, U03A8,           braceleft, braceleft,        NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
+    key <AB04> { [            v, V,                   U03C9, U03A9,          braceright, bracetright,      NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
     key <AB05> { [            b, B,                   U03B2, U0392        ] };
     key <AB06> { [            n, N,                   U03BD, U039D,                Home, Home,             NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
     key <AB07> { [            m, M,                   U03BC, U039C,                Next, Next,             NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
