@@ -66,6 +66,7 @@ xkb_symbols "modded" {
     key <LCTL> { [       Escape               ], type[Group1] = "ONE_LEVEL" };
     key <LWIN> { [        Alt_L, Meta_L       ], type[Group1] = "TWO_LEVEL" };
     key <LALT> { [      Super_L               ], type[Group1] = "ONE_LEVEL" };
+    key <SPCE> { [        space, space,               space, space,          underscore, underscore,          space, space        ], type[Group1] = "EIGHT_LEVEL" };
     key <RALT> { [ ISO_Level5_Shift           ], type[Group1] = "ONE_LEVEL" };
     key <MENU> { [ ISO_Level5_Shift           ], type[Group1] = "ONE_LEVEL" };
 
