@@ -14,12 +14,12 @@ xkb_symbols "modded" {
     key <AE08> { [            8, asterisk     ] };
     key <AE09> { [            9, parenleft    ] };
     key <AE10> { [            0, parenright   ] };
-    key <AE11> { [        minus, underscore   ] };
-    key <AE12> { [        equal, plus         ] };
+    key <AE11> { [        minus, underscore,       NoSymbol, NoSymbol,         NoSymbol, NoSymbol,            U00B1, U2213        ], type[Group1] = "EIGHT_LEVEL" };
+    key <AE12> { [        equal, plus,             NoSymbol, NoSymbol,         NoSymbol, NoSymbol,            U2260, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
     key <BKSP> { [    BackSpace               ], type[Group1] = "ONE_LEVEL" };
 
     key <TAB>  { [          Tab               ], type[Group1] = "ONE_LEVEL" };
-    key <AD01> { [            q, Q            ] };
+    key <AD01> { [            q, Q,                NoSymbol, NoSymbol,         NoSymbol, NoSymbol,         NoSymbol, U221E        ], type[Group1] = "EIGHT_LEVEL" };
     key <AD02> { [            w, W            ] };
     key <AD03> { [            e, E,                   U03F5, U0395,         bracketleft, bracketleft,         U03B5, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
     key <AD04> { [            r, R,                   U03C1, U03A1,        bracketright, bracketright,     NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
@@ -30,7 +30,7 @@ xkb_symbols "modded" {
     key <AD09> { [            o, O,                   U03BF, U039F,            asterisk, asterisk,         NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
     key <AD10> { [            p, P,                   U03C0, U03A0,               slash, slash,            NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
     key <AD11> { [  bracketleft, braceleft    ] };
-    key <AD12> { [ bracketright, braceright   ] };
+    key <AD12> { [ bracketright, braceright,       NoSymbol, NoSymbol,         NoSymbol, NoSymbol,            U2248, U221D        ], type[Group1] = "EIGHT_LEVEL" };
     key <BKSL> { [    backslash, bar          ] };
 
     key <CAPS> { [    Control_L               ], type[Group1] = "ONE_LEVEL" };
