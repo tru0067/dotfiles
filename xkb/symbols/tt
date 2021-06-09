@@ -48,7 +48,7 @@ xkb_symbols "modded" {
     key <RTRN> { [       Return               ], type[Group1] = "ONE_LEVEL" };
 
     key <LFSH> { [      Shift_L               ], type[Group1] = "ONE_LEVEL" };
-    key <AB01> { [            z, Z,                   U03B6, U0396        ] };
+    key <AB01> { [            z, Z,                   U03B6, U0396,            NoSymbol, NoSymbol,         NoSymbol, U221A        ], type[Group1] = "EIGHT_LEVEL" };
     key <AB02> { [            x, X,                   U03C7, U03A7        ] };
     key <AB03> { [            c, C,                   U03C8, U03A8,           braceleft, braceleft,        NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
     key <AB04> { [            v, V,                   U03C9, U03A9,          braceright, bracetright,      NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
