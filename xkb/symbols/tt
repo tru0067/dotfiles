@@ -43,7 +43,7 @@ xkb_symbols "modded" {
     key <AC07> { [            j, J,                   U03BE, U039E,                Down, Down,             NoSymbol, U2193        ], type[Group1] = "EIGHT_LEVEL" };
     key <AC08> { [            k, K,                   U03BA, U039A,                  Up, Up,               NoSymbol, U2191        ], type[Group1] = "EIGHT_LEVEL" };
     key <AC09> { [            l, L,                   U03BB, U039B,               Right, Right,            NoSymbol, U2192        ], type[Group1] = "EIGHT_LEVEL" };
-    key <AC10> { [    semicolon, colon        ] };
+    key <AC10> { [    semicolon, colon,               U00F1, U00D1,            NoSymbol, NoSymbol,         NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
     key <AC11> { [   apostrophe, quotedbl     ] };
     key <RTRN> { [       Return               ], type[Group1] = "ONE_LEVEL" };
 
