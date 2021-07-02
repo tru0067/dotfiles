@@ -51,8 +51,8 @@ set listchars+=precedes:<              " Text preceding past start of window.
 " Bindings.
 " Y yanks to end of line (consistent with D and C).
 nnoremap Y y$
-" Let <CR> insert a blank line.
-nnoremap <CR> o<ESC>
+" Let Ctrl-J insert a blank line below.
+nnoremap <C-J> o<Esc>
 " Let Ctrl-W delete the previous WORD.
 inoremap <C-W> <C-\><C-O>dB
 " Let Ctrl-Backspace delete the previous word.
