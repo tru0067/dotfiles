@@ -22,13 +22,11 @@ set softtabstop=4                      " Insert up to 4 spaces when tab is press
 set shiftwidth=4                       " Use 4 spaces for autoindentation and for >>, << and ==.
 set expandtab                          " Convert tabs to spaces.
 " Visual settings.
-set number                             " Show line numbers.
 set relativenumber                     " Show relative line numbers.
 set ruler                              " Show coordinates in bottom right.
+set nowrap                             " Do not visually wrap long lines.
 set scrolloff=8                        " Keep 8 lines on screen while scrolling.
 set sidescrolloff=8                    " Keep 8 columns on screen while scrolling.
-set nowrap                             " Do not visually wrap long lines.
-set showmatch                          " Highlight matching parenthesis.
 set colorcolumn=81                     " Put a column line just after 80 characters.
 " Command line.
 set showmode                           " Show the current mode.
@@ -37,7 +35,6 @@ set showcmd                            " Show (partial) commands.
 set cmdheight=2                        " Show two lines for the command line.
 " Command behaviour.
 set wildmode=longest,list              " Complete longest matching string, then show available matches.
-set smartcase                          " Search only case sensitive if mixed case has been entered.
 set incsearch                          " Incremental search.
 set hidden                             " Allow windows to be closed without saving them.
 " List and listchars behaviour.
@@ -60,10 +57,6 @@ inoremap <C-H> <C-\><C-O>db
 " Let Ctrl-Delete delete the next word.
 inoremap <C-Del> <C-\><C-O>dw
 let mapleader=" "
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>e :Lex<CR>
 
 " File explorer.
