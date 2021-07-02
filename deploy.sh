@@ -3,67 +3,90 @@
 # Create skeleton config files that just source the config files in this
 # repository, if those files already exist, do nothing.
 mkdir -p ~/.config/alacritty
-if [[ ! -f ~/.config/alacritty/alacritty.yml ]]; then
-    printf "import:\n  - ${PWD}/alacritty/alacritty.yml\n" > ~/.config/alacritty/alacritty.yml
-    printf "Adding skeleton ~/.config/alacritty/alacritty.yml\n"
+current_target=~/.config/alacritty/alacritty.yml
+if [[ ! -f ${current_target} ]]; then
+    printf "import:\n  - ${PWD}/alacritty/alacritty.yml\n" > ${current_target}
+    printf "Creating skeleton ${current_target}\n"
+else
+    printf "Skipping skeleton ${current_target}\n"
 fi
-if [[ ! -f ~/.gitconfig ]]; then
-    printf "[include]\n\tpath = ${PWD}/git/.gitconfig\n" > ~/.gitconfig
-    printf "Adding skeleton ~/.gitconfig\n"
+current_target=~/.gitconfig
+if [[ ! -f ${current_target} ]]; then
+    printf "[include]\n\tpath = ${PWD}/git/.gitconfig\n" > ${current_target}
+    printf "Creating skeleton ${current_target}\n"
+else
+    printf "Skipping skeleton ${current_target}\n"
 fi
 mkdir -p ~/.config/sway
-if [[ ! -f ~/.config/sway/config ]]; then
-    printf "include ${PWD}/sway/config\n" > ~/.config/sway/config
-    printf "Adding skeleton ~/.config/sway/config\n"
+current_target=~/.config/sway/config
+if [[ ! -f ${current_target} ]]; then
+    printf "include ${PWD}/sway/config\n" > ${current_target}
+    printf "Creating skeleton ${current_target}\n"
+else
+    printf "Skipping skeleton ${current_target}\n"
 fi
-if [[ ! -f ~/.config/sway/status.sh ]]; then
-    cp ${PWD}/sway/status.sh ~/.config/sway/status.sh
-    printf "Copying to ~/.config/sway/status.sh\n"
+current_target=~/.config/sway/status.sh
+if [[ ! -f ${current_target} ]]; then
+    cp ${PWD}/sway/status.sh ${current_target}
+    printf "Creating copy in  ${current_target}\n"
+else
+    printf "Skipping copy of  ${current_target}\n"
 fi
-if [[ ! -f ~/.vimrc ]]; then
-    printf "source ${PWD}/vim/.vimrc\n" > ~/.vimrc
-    printf "Adding skeleton ~/.vimrc\n"
+current_target=~/.vimrc
+if [[ ! -f ${current_target} ]]; then
+    printf "source ${PWD}/vim/.vimrc\n" > ${current_target}
+    printf "Creating skeleton ${current_target}\n"
+else
+    printf "Skipping skeleton ${current_target}\n"
 fi
 mkdir -p ~/.config/nvim
-if [[ ! -f ~/.config/nvim/init.vim ]]; then
-    printf "source ${PWD}/vim/init.vim\n" > ~/.config/nvim/init.vim
-    printf "Adding skeleton ~/.config/nvim/init.vim\n"
+current_target=~/.config/nvim/init.vim
+if [[ ! -f ${current_target} ]]; then
+    printf "source ${PWD}/vim/init.vim\n" > ${current_target}
+    printf "Creating skeleton ${current_target}\n"
+else
+    printf "Skipping skeleton ${current_target}\n"
 fi
-if [[ ! -f ~/.zshrc ]]; then
-    printf "source ${PWD}/zsh/.zshrc\n" > ~/.zshrc
-    printf "Adding skeleton ~/.zshrc\n"
+current_target=~/.zshrc
+if [[ ! -f ${current_target} ]]; then
+    printf "source ${PWD}/zsh/.zshrc\n" > ${current_target}
+    printf "Creating skeleton ${current_target}\n"
+else
+    printf "Skipping skeleton ${current_target}\n"
 fi
 
 # Now do the same for every vim file in this repo's `vim/after/ftplugin/`
+mkdir -p ~/.config/nvim/after/ftplugin
+current_target=~/.config/nvim/after/ftplugin/
 for filename in vim/after/ftplugin/*.vim; do
     # Check that the filename we just matched actually exists.
-    if [[ ! -f "$filename" ]]; then
+    if [[ ! -f "${filename}" ]]; then
         continue
     fi
     # Strip out the path part (just keep the filename itself).
-    filename="$(basename -- $filename)"
-    # Check if we already have a corresponding file in our config directory.
-    mkdir -p ~/.config/nvim/after/ftplugin
-    if [[ ! -f ~/.config/nvim/after/ftplugin/$filename ]]; then
-        # If we don't, make one to source the one in this repo.
-        printf "source ${PWD}/vim/after/ftplugin/$filename\n" > ~/.config/nvim/after/ftplugin/$filename
-        printf "Adding skeleton ~/.config/nvim/after/ftplugin/$filename\n"
+    filename="$(basename -- ${filename})"
+    if [[ ! -f ${current_target}${filename} ]]; then
+        printf "source ${PWD}/vim/after/ftplugin/${filename}\n" > ${current_target}${filename}
+        printf "Creating skeleton ${current_target}${filename}\n"
+    else
+        printf "Skipping skeleton ${current_target}${filename}\n"
     fi
 done
 
 # And for every vim file in this repo's `vim/after/syntax/`
+mkdir -p ~/.config/nvim/after/syntax
+current_target=~/.config/nvim/after/syntax/
 for filename in vim/after/syntax/*.vim; do
     # Check that the filename we just matched actually exists.
-    if [[ ! -f "$filename" ]]; then
+    if [[ ! -f "${filename}" ]]; then
         continue
     fi
     # Strip out the path part (just keep the filename itself).
-    filename="$(basename -- $filename)"
-    # Check if we already have a corresponding file in our config directory.
-    mkdir -p ~/.config/nvim/after/syntax
-    if [[ ! -f ~/.config/nvim/after/syntax/$filename ]]; then
-        # If we don't, make one to source the one in this repo.
-        printf "source ${PWD}/vim/after/syntax/$filename\n" > ~/.config/nvim/after/syntax/$filename
-        printf "Adding skeleton ~/.config/nvim/after/syntax/$filename\n"
+    filename="$(basename -- ${filename})"
+    if [[ ! -f ${current_target}${filename} ]]; then
+        printf "source ${PWD}/vim/after/syntax/${filename}\n" > ${current_target}${filename}
+        printf "Creating skeleton ${current_target}${filename}\n"
+    else
+        printf "Skipping skeleton ${current_target}${filename}\n"
     fi
 done
