@@ -9,8 +9,16 @@ colorscheme verdurous-dark
 
 " Plugins
 call plug#begin()
+Plug 'SirVer/ultisnips'
 Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
+
+" UltiSnips
+let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit=$HOME."/dotfiles/vim/UltiSnips"
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<C-J>"
+let g:UltiSnipsJumpBackwardTrigger="<C-K>"
 
 " Statusline.
 source ~/dotfiles/vim/statusline.vim
