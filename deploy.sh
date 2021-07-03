@@ -54,39 +54,3 @@ if [[ ! -f ${current_target} ]]; then
 else
     printf "Skipping skeleton ${current_target}\n"
 fi
-
-# Now do the same for every vim file in this repo's `vim/after/ftplugin/`
-mkdir -p ~/.config/nvim/after/ftplugin
-current_target=~/.config/nvim/after/ftplugin/
-for filename in vim/after/ftplugin/*.vim; do
-    # Check that the filename we just matched actually exists.
-    if [[ ! -f "${filename}" ]]; then
-        continue
-    fi
-    # Strip out the path part (just keep the filename itself).
-    filename="$(basename -- ${filename})"
-    if [[ ! -f ${current_target}${filename} ]]; then
-        printf "source ${PWD}/vim/after/ftplugin/${filename}\n" > ${current_target}${filename}
-        printf "Creating skeleton ${current_target}${filename}\n"
-    else
-        printf "Skipping skeleton ${current_target}${filename}\n"
-    fi
-done
-
-# And for every vim file in this repo's `vim/after/syntax/`
-mkdir -p ~/.config/nvim/after/syntax
-current_target=~/.config/nvim/after/syntax/
-for filename in vim/after/syntax/*.vim; do
-    # Check that the filename we just matched actually exists.
-    if [[ ! -f "${filename}" ]]; then
-        continue
-    fi
-    # Strip out the path part (just keep the filename itself).
-    filename="$(basename -- ${filename})"
-    if [[ ! -f ${current_target}${filename} ]]; then
-        printf "source ${PWD}/vim/after/syntax/${filename}\n" > ${current_target}${filename}
-        printf "Creating skeleton ${current_target}${filename}\n"
-    else
-        printf "Skipping skeleton ${current_target}${filename}\n"
-    fi
-done

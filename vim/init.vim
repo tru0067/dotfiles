@@ -1,5 +1,8 @@
 source ~/.vimrc                        " Source the vim specific settings first.
 
+set rtp+=~/dotfiles/vim
+set rtp+=~/dotfiles/vim/after
+
 " Colorscheme.
 set termguicolors                      " Set the terminal highlighting to use the gui 24 bit colors.
 colorscheme verdurous-dark

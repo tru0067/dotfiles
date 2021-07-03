@@ -1,4 +1,4 @@
-source ~/.config/nvim/after/ftplugin/Programming.vim
+source ~/dotfiles/vim/after/ftplugin/Programming.vim
 " Use real tabs with a width of 8.
 setlocal tabstop=8
 setlocal softtabstop=8

@@ -1,1 +1,1 @@
-source ~/.config/nvim/after/ftplugin/Programming.vim
+source ~/dotfiles/vim/after/ftplugin/Programming.vim
