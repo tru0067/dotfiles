@@ -25,4 +25,4 @@ source ~/dotfiles/vim/statusline.vim
 
 " Bindings.
 " Get the highlight group of the text under the cursor.
-nnoremap <leader>c :execute 'hi' synIDattr(synID(line("."), col("."), 1), "name")<CR>
+nnoremap <leader>c :execute "hi" synIDattr(synID(line("."), col("."), 1), "name")<CR>
