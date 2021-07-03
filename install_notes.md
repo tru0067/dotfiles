@@ -55,6 +55,12 @@ sudo apt install neovim
 For Neovim I use `vim-plug` to manage my plugins, available at:
 <https://github.com/junegunn/vim-plug>.
 
+I use the UltiSnips plugin to manage my snippets. In order for it to work we
+need a python provider for neovim:
+```sh
+pip intall pynvim
+```
+
 TODO: I think I want to build it from source at some point.
 
 ### PCManFM
