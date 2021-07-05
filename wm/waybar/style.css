@@ -1,12 +1,17 @@
-* { color: #F1E6D9; font-weight: bold; }
+* {
+    color: #F1E6D9;
+    font-family: "LiterationMono Nerd Font";
+    font-size: 19px;
+    font-weight: bold;
+}
 
 window#waybar { background: #1C1C1C; }
 
-#workspaces button { padding: 0px 2px 1px 2px; }
+#workspaces button { padding: 1px 2px 1px 2px; }
 #workspaces button.focused { background: #5A89AD; }
 #workspaces button:hover   { background: #384048; }
 
-#mode, #tray, #pulseaudio, #battery, #clock { padding: 0px 8px 1px 8px; }
+#mode, #tray, #pulseaudio, #battery, #clock { padding: 1px 8px 1px 8px; }
 
 #pulseaudio { background: #22262A; }
 
