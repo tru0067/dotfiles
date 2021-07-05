@@ -5,15 +5,16 @@
 ##### `alacritty/`
 Terminal colorscheme, that's about it.
 
-##### `gnome/`
-My setting tweaks for the Gnome desktop environment.
-
-##### `sway/`
-All my window manager config.
+##### `git/`
+Very simple `.gitconfig`.
 
 ##### `vim/`
-A bare minimum `.vimrc` as well as my `init.vim`. Also contains my custom syntax
-rules. For my vim colorscheme see <https://github.com/tru0067/verdurous>.
+A bare minimum `.vimrc` as well as my `init.vim`. For my vim colorscheme see
+<https://github.com/tru0067/verdurous>.
+
+##### `wm/`
+All my window manager config. Contains some tweaks to the Gnome DE, as well as
+my config for `sway` and `waybar`.
 
 ##### `xkb/`
 My custom keyboard layout.
@@ -33,16 +34,13 @@ A brief outline of some common steps when performing a fresh install.
 
 ### TODO
 -   Sway
-    -   Change sway status bar to `waybar`
     -   Set up sway idle/lock
 -   Change terminal emulator to `kitty`
     -   Underline and images
     -   Want to check battery performance though
 -   Configure NeoVim
-    -   Plugin manager
     -   TreeSitter
     -   Built-in LSP
-    -   Snippets
     -   LaTeX/markdown plugins
         -   Language injection with TreeSitter?
     -   Refactor makeprg's into compiler scripts
