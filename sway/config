@@ -156,18 +156,7 @@
 # Status Bar:
     # Read `man 5 sway-bar` for more information about this section.
     bar {
-        position top
-        # When the status_command prints a new line to stdout, swaybar updates.
-        status_command while ~/.config/sway/status.sh; do sleep 1; done
-        colors {
-            background #1C1C1C
-            statusline #F1E6D9
-            separator  #808892
-            # Colors given are <border> <background> <text>
-            active_workspace   #5A89AD #5A89AD #F1E6D9
-            inactive_workspace #1C1C1C #1C1C1C #808892
-        }
-        font $font
+        swaybar_command waybar
     }
 
 # Autostart.

@@ -1,0 +1,33 @@
+{
+    "height": 26,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-right": ["tray", "pulseaudio", "battery", "clock"],
+    "sway/workspaces": {},
+    "sway/mode": {},
+    "tray": {},
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "ﱝ",
+        "format-bluetooth": "{icon} {volume}% ",
+        "format-bluetooth-muted": "ﱝ ",
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+        "states": {
+            "warning": 25,
+            "critical": 10
+        }
+    },
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M}",
+        "tooltip-format": "{:%A %-d %B %Y}",
+        "timezone": "America/Vancouver",
+        "timezones": ["Australia/Melbourne", "America/Vancouver"]
+    }
+}

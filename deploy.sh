@@ -25,13 +25,6 @@ if [[ ! -f ${current_target} ]]; then
 else
     printf "Skipping skeleton ${current_target}\n"
 fi
-current_target=~/.config/sway/status.sh
-if [[ ! -f ${current_target} ]]; then
-    cp ${PWD}/sway/status.sh ${current_target}
-    printf "Creating copy in  ${current_target}\n"
-else
-    printf "Skipping copy of  ${current_target}\n"
-fi
 current_target=~/.vimrc
 if [[ ! -f ${current_target} ]]; then
     printf "source ${PWD}/vim/.vimrc\n" > ${current_target}
