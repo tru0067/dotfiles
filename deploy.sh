@@ -25,6 +25,21 @@ if [[ ! -f ${current_target} ]]; then
 else
     printf "Skipping skeleton ${current_target}\n"
 fi
+mkdir -p ~/.config/waybar
+current_target=~/.config/waybar/config
+if [[ ! -f ${current_target} ]]; then
+    printf "{\n    \"include\": [\"${PWD}/wm/waybar/config\"]\n}\n" > ${current_target}
+    printf "Creating skeleton ${current_target}\n"
+else
+    printf "Skipping skeleton ${current_target}\n"
+fi
+current_target=~/.config/waybar/style.css
+if [[ ! -f ${current_target} ]]; then
+    printf "@import \"${PWD}/wm/waybar/style.css\";\n" > ${current_target}
+    printf "Creating skeleton ${current_target}\n"
+else
+    printf "Skipping skeleton ${current_target}\n"
+fi
 current_target=~/.vimrc
 if [[ ! -f ${current_target} ]]; then
     printf "source ${PWD}/vim/.vimrc\n" > ${current_target}
