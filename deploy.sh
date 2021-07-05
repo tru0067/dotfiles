@@ -20,7 +20,7 @@ fi
 mkdir -p ~/.config/sway
 current_target=~/.config/sway/config
 if [[ ! -f ${current_target} ]]; then
-    printf "include ${PWD}/sway/config\n" > ${current_target}
+    printf "include ${PWD}/wm/sway/config\n" > ${current_target}
     printf "Creating skeleton ${current_target}\n"
 else
     printf "Skipping skeleton ${current_target}\n"
