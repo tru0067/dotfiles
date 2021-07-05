@@ -1,8 +1,8 @@
-* { color: #F1E6D9; }
+* { color: #F1E6D9; font-weight: bold; }
 
 window#waybar { background: #1C1C1C; }
 
-#workspaces button { padding: 0px 4px 1px 4px; }
+#workspaces button { padding: 0px 2px 1px 2px; }
 #workspaces button.focused { background: #5A89AD; }
 #workspaces button:hover   { background: #384048; }
 
