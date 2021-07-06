@@ -22,7 +22,7 @@ git config credential.helper store
 ```
 
 ### Alacritty
-Alacritty is not as of yet in the official ubuntu repos. Thus I intall it from
+Alacritty is not as of yet in the official ubuntu repos. Thus I install it from
 the popOS PPA:
 ```sh
 sudo add-apt-repository ppa:mmstick76/alacritty
@@ -70,7 +70,7 @@ sudo apt install pcmanfm
 ```
 
 TODO: Do I want PCManFM to manage desktop icons? `pcmanfm --desktop`. Would this
-work with sway? Does PCManFM play nice in wayland?
+work with sway?
 
 ## Appearance
 
@@ -82,9 +82,9 @@ After installing them, make sure to refresh the font cache:
 fc-cache -f
 ```
 
-### Verdurous
-I have my own vim colorscheme. Available at
-<https://github.com/tru0067/verdurous>.
+### Terminal colorschemes
+I have my own vim and alacritty colorschemes (and even a firefox one). Available
+at <https://github.com/tru0067/verdurous>.
 
 ### Dotfiles
 Now that all that stuff is installed, I should be able to configure them with my
@@ -104,14 +104,14 @@ layout:
 ```sh
 sudo ln --symbolic ~/dotfiles/xkb/symbols/tt /usr/share/X11/xkb/symbols
 ```
-and then by copying the contents of `xkb/evdev.xml` into
-`/usr/share/X11/xkb/rules/evdev.xml`. A restart is required, and then the
+and then by copying the contents of the `evdev.xml` portion of `xkb/README.md`
+into `/usr/share/X11/xkb/rules/evdev.xml`. A restart is required, and then the
 keyboard layout can be selected.
 
 ## Window manager
 
 ### Sway
-I've been experimenting with sway as my window manager:
+I use sway as my window manager:
 ```sh
 sudo apt install sway
 ```
@@ -129,7 +129,6 @@ sudo usermod -a -G video $LOGNAME
 ```
 and then log out and back in.
 
-
 I typically configure my inputs and outputs with sway on a per device basis,
 good options to know are:
 ```
@@ -146,6 +145,8 @@ The list of input devices can be obtained from within sway with:
 ```sh
 swaymsg -t get_inputs
 ```
+(You use the "Identifier" line.)
+
 Another useful one-liner is:
 ```
 output * bg $(find /path/to/wallpaper-directory -type f | shuf -n 1) fill
@@ -161,8 +162,8 @@ In order for firefox to use the wayland backend, it may be necessary to add
 When developing with python, I typically use the Anaconda distribution,
 available at <https://www.anaconda.com/products/individual>.
 
-Some aspects of Anaconda work by modifying `.shrc`, in order for those parts
-to work with `zsh` run:
+Some aspects of Anaconda work by modifying a shell rc file, in order for those
+parts to work with `zsh` run:
 ```sh
 conda init zsh
 ```
@@ -189,10 +190,4 @@ sudo apt install patat
 TODO: Dropbox!
 
 ### Spotify
-TODO: Spotify
-
-### Code
-TODO: Code?
-
-### Chrome
-TODO: Chrome?
+TODO: Spotify?
