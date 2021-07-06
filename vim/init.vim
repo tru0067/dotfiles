@@ -23,6 +23,13 @@ let g:UltiSnipsJumpBackwardTrigger="<C-K>"
 " Statusline.
 source ~/dotfiles/vim/statusline.vim
 
+" Autocommands.
+" Highlight yanks.
+"augroup highlight_yank
+"    autocmd!
+"    au TextYankPost * silent! lua vim.highlight.on_yank{higroup="Visual", timeout=200}
+"augroup END
+
 " Bindings.
 " Get the highlight group of the text under the cursor.
 nnoremap <leader>c :execute "hi" synIDattr(synID(line("."), col("."), 1), "name")<CR>
