@@ -160,6 +160,6 @@
     }
 
 # Autostart.
-exec dropbox start
+exec ~/Downloads/pcloud
 
 include /etc/sway/config.d/*

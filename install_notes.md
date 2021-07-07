@@ -186,8 +186,10 @@ kitten (Patat version >= 0.8.7) or through `w3m-img`).
 sudo apt install patat
 ```
 
-### Dropbox
-TODO: Dropbox!
+### Cloud storage
+I currently use pCloud for my cloud storage. The download for their appimage can
+be found at:
+<https://www.pcloud.com/download-free-online-cloud-file-storage.html>
 
 ### Spotify
 TODO: Spotify?
