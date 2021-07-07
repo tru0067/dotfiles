@@ -15,8 +15,10 @@ window#waybar { background: #1C1C1C; }
 
 #pulseaudio { background: #22262A; }
 
-#battery          { background: #22262A; }
-#battery.warning  { background: #FFFFAF; }
-#battery.critical { background: #BF4052; }
+#battery                   { background: #22262A; }
+#battery.warning           { background: #CFA000; }
+#battery.warning.charging  { background: #22262A; }
+#battery.critical          { background: #BF4052; }
+#battery.critical.charging { background: #00AF60; }
 
 #clock { background: #384048 }
