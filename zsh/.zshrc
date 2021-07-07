@@ -65,6 +65,10 @@ function zle-keymap-select {
 function zle-line-init() { echo -ne "\e[5 q" }
 zle -N zle-keymap-select
 zle -N zle-line-init
+# Let Ctrl-E open the command line in an editor.
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey '^E' edit-command-line
 
 # Keybindings.
 # Let Ctrl-Backspace delete the previous word.
