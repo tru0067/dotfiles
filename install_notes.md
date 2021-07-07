@@ -67,7 +67,6 @@ build, make it with:
 ```sh
 sudo make CMAKE_BUILD_TYPE=Release install
 ```
-
 The built binary should be earlier on the path than the packaged one, so it
 should be fine to run with `nvim`. To use it with a shorter command, such as
 `vi` one can override the normal alternative in `/etc/alternatives`. E.g. with:
@@ -76,6 +75,9 @@ cd /etc/alternatives
 sudo rm vi
 sudo ln -s /usr/local/bin/nvim vi
 ```
+Since the alternative for `vim` should still point to the packaged binary this
+allows me to easily switch between both versions by simply running `vim` or
+`vi`.
 
 ### PCManFM
 My file manager of choice is PCManFM:
