@@ -22,7 +22,7 @@ git config credential.helper store
 ```
 
 ### Alacritty
-Alacritty is not as of yet in the official ubuntu repos. Thus I install it from
+Alacritty is not as of yet in the official Ubuntu repos. Thus I install it from
 the popOS PPA:
 ```sh
 sudo add-apt-repository ppa:mmstick76/alacritty
@@ -192,4 +192,5 @@ be found at:
 <https://www.pcloud.com/download-free-online-cloud-file-storage.html>
 
 ### Spotify
-TODO: Spotify?
+Spotify is available on Ubuntu! It can be found at:
+<https://www.spotify.com/au/download/linux/>
