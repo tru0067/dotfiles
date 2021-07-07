@@ -61,7 +61,21 @@ need a python provider for neovim:
 pip intall pynvim
 ```
 
-TODO: I think I want to build it from source at some point.
+In order to build the latest version of Neovim from source, follow along with
+<https://github.com/neovim/neovim/wiki/Building-Neovim>. For using the "Release"
+build, make it with:
+```sh
+sudo make CMAKE_BUILD_TYPE=Release install
+```
+
+The built binary should be earlier on the path than the packaged one, so it
+should be fine to run with `nvim`. To use it with a shorter command, such as
+`vi` one can override the normal alternative in `/etc/alternatives`. E.g. with:
+```sh
+cd /etc/alternatives
+sudo rm vi
+sudo ln -s /usr/local/bin/nvim vi
+```
 
 ### PCManFM
 My file manager of choice is PCManFM:
