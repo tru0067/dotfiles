@@ -23,6 +23,7 @@ set shiftwidth=4                       " Use 4 spaces for autoindentation and fo
 set expandtab                          " Convert tabs to spaces.
 " Visual settings.
 set relativenumber                     " Show relative line numbers.
+set number                             " Show the current line's number.
 set ruler                              " Show coordinates in bottom right.
 set nowrap                             " Do not visually wrap long lines.
 set scrolloff=8                        " Keep 8 lines on screen while scrolling.
