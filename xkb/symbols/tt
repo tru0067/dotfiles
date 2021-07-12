@@ -68,7 +68,6 @@ xkb_symbols "modded" {
     key <LALT> { [      Super_L               ], type[Group1] = "ONE_LEVEL" };
     key <SPCE> { [        space, space,               space, space,          underscore, underscore,          space, space        ], type[Group1] = "EIGHT_LEVEL" };
     key <RALT> { [ ISO_Level5_Shift           ], type[Group1] = "ONE_LEVEL" };
-    key <MENU> { [ ISO_Level5_Shift           ], type[Group1] = "ONE_LEVEL" };
 
     include "level3(modifier_mapping)"
     include "level5(modifier_mapping)"
