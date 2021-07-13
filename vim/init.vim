@@ -5,7 +5,7 @@ set rtp+=~/dotfiles/vim/after
 
 " Colorscheme.
 set termguicolors                      " Set the terminal highlighting to use full 24 bit colors.
-colorscheme verdurous-dark
+colorscheme verdurous-darker
 
 " Plugins
 call plug#begin()
