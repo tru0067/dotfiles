@@ -4,7 +4,7 @@
 
 # Colorscheme.
 import:
-  - /home/tru0067/.config/alacritty/verdurous-dark.yml
+  - /home/tru0067/.config/alacritty/colors/verdurous-dark.yml
 
 # Font configuration.
 font:
