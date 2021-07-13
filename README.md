@@ -39,7 +39,6 @@ A brief outline of some common steps when performing a fresh install.
     -   Underline and images
     -   Want to check battery performance though
 -   Configure NeoVim
-    -   TreeSitter
     -   Built-in LSP
     -   LaTeX/markdown plugins
         -   Language injection with TreeSitter?
