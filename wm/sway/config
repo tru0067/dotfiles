@@ -24,7 +24,7 @@
         -b "Logout" "swaymsg exit" \
         -s "Nothing" \
         --font "$font" \
-        --background "#1C1C1C" \
+        --background "#1B1C1D" \
         --text "#F1E6D9" \
         --button-background "#384048" \
         --border "#808892" \
@@ -148,8 +148,8 @@
     default_floating_border normal 1
     # Colors given are <border> <background> <text> <indicator> <child_border>.
     client.focused          #5A89AD #5A89AD #F1E6D9 #00AF60 #5A89AD
-    client.focused_inactive #1C1C1C #1C1C1C #808892 #1C1C1C #1C1C1C
-    client.unfocused        #1C1C1C #1C1C1C #808892 #1C1C1C #1C1C1C
+    client.focused_inactive #1B1C1D #1B1C1D #808892 #1B1C1D #1B1C1D
+    client.unfocused        #1B1C1D #1B1C1D #808892 #1B1C1D #1B1C1D
     # Only draw borders when there is more than one window.
     smart_borders on
 
