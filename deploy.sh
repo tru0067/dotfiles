@@ -3,70 +3,30 @@
 # Create skeleton config files that just source the config files in this
 # repository, if those files already exist, do nothing.
 
+skeleton() {
+    s=${1}  # Source string.
+    t=${2}  # Target file.
+    mkdir -p $(dirname ${t})
+    if [[ ! -f ${t} ]]; then
+        printf "${s}\n" > ${t}
+        printf "Creating skeleton ${t}\n"
+    else
+        printf "Skipping skeleton ${t}\n"
+    fi
+}
+
 # Alacritty.
-mkdir -p ~/.config/alacritty
-current_target=~/.config/alacritty/alacritty.yml
-if [[ ! -f ${current_target} ]]; then
-    printf "import:\n  - ${PWD}/alacritty/alacritty.yml\n" > ${current_target}
-    printf "Creating skeleton ${current_target}\n"
-else
-    printf "Skipping skeleton ${current_target}\n"
-fi
+skeleton "import:\n  - ${PWD}/alacritty/alacritty.yml" ~/.config/alacritty/alacritty.yml
 # Git.
-current_target=~/.gitconfig
-if [[ ! -f ${current_target} ]]; then
-    printf "[include]\n\tpath = ${PWD}/git/.gitconfig\n" > ${current_target}
-    printf "Creating skeleton ${current_target}\n"
-else
-    printf "Skipping skeleton ${current_target}\n"
-fi
+skeleton "[include]\n\tpath = ${PWD}/git/.gitconfig" ~/.gitconfig
 # Sway.
-mkdir -p ~/.config/sway
-current_target=~/.config/sway/config
-if [[ ! -f ${current_target} ]]; then
-    printf "include ${PWD}/wm/sway/config\n" > ${current_target}
-    printf "Creating skeleton ${current_target}\n"
-else
-    printf "Skipping skeleton ${current_target}\n"
-fi
+skeleton "include ${PWD}/wm/sway/config" ~/.config/sway/config
 # Waybar.
-mkdir -p ~/.config/waybar
-current_target=~/.config/waybar/config
-if [[ ! -f ${current_target} ]]; then
-    printf "{\n    \"include\": [\"${PWD}/wm/waybar/config\"]\n}\n" > ${current_target}
-    printf "Creating skeleton ${current_target}\n"
-else
-    printf "Skipping skeleton ${current_target}\n"
-fi
-current_target=~/.config/waybar/style.css
-if [[ ! -f ${current_target} ]]; then
-    printf "@import \"${PWD}/wm/waybar/style.css\";\n" > ${current_target}
-    printf "Creating skeleton ${current_target}\n"
-else
-    printf "Skipping skeleton ${current_target}\n"
-fi
+skeleton "{\n    \"include\": [\"${PWD}/wm/waybar/config\"]\n}" ~/.config/waybar/config
+skeleton "@import \"${PWD}/wm/waybar/style.css\";" ~/.config/waybar/style.css
 # Vim.
-current_target=~/.vimrc
-if [[ ! -f ${current_target} ]]; then
-    printf "source ${PWD}/vim/.vimrc\n" > ${current_target}
-    printf "Creating skeleton ${current_target}\n"
-else
-    printf "Skipping skeleton ${current_target}\n"
-fi
+skeleton "source ${PWD}/vim/.vimrc" ~/.vimrc
 # Neovim.
-mkdir -p ~/.config/nvim
-current_target=~/.config/nvim/init.vim
-if [[ ! -f ${current_target} ]]; then
-    printf "source ${PWD}/vim/init.vim\n" > ${current_target}
-    printf "Creating skeleton ${current_target}\n"
-else
-    printf "Skipping skeleton ${current_target}\n"
-fi
+skeleton "source ${PWD}/vim/init.vim" ~/.config/nvim/init.vim
 # Zsh.
-current_target=~/.zshrc
-if [[ ! -f ${current_target} ]]; then
-    printf "source ${PWD}/zsh/.zshrc\n" > ${current_target}
-    printf "Creating skeleton ${current_target}\n"
-else
-    printf "Skipping skeleton ${current_target}\n"
-fi
+skeleton "source ${PWD}/zsh/.zshrc" ~/.zshrc
