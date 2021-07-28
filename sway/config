@@ -40,11 +40,11 @@
         # Start firefox.
         bindsym $mod+Backspace exec firefox
         # Start file manager.
-        bindsym $mod+backslash exec pcmanfm
+        bindsym $mod+backslash exec thunderbird
         # Start a terminal.
         bindsym $mod+Return exec alacritty
         # Start thunderbird.
-        bindsym $mod+ISO_Level3_Shift exec thunderbird
+        bindsym $mod+ISO_Level3_Shift exec pcmanfm
         # Kill focused window.
         bindsym $mod+Shift+q kill
         # Start your launcher.
