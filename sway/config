@@ -43,6 +43,8 @@
         bindsym $mod+backslash exec pcmanfm
         # Start a terminal.
         bindsym $mod+Return exec alacritty
+        # Start thunderbird.
+        bindsym $mod+ISO_Level3_Shift exec thunderbird
         # Kill focused window.
         bindsym $mod+Shift+q kill
         # Start your launcher.
