@@ -20,10 +20,10 @@ skeleton "import:\n  - ${PWD}/alacritty/alacritty.yml" ~/.config/alacritty/alacr
 # Git.
 skeleton "[include]\n\tpath = ${PWD}/git/.gitconfig" ~/.gitconfig
 # Sway.
-skeleton "include ${PWD}/wm/sway/config" ~/.config/sway/config
+skeleton "include ${PWD}/sway/config" ~/.config/sway/config
 # Waybar.
-skeleton "{\n    \"include\": [\"${PWD}/wm/waybar/config\"]\n}" ~/.config/waybar/config
-skeleton "@import \"${PWD}/wm/waybar/style.css\";" ~/.config/waybar/style.css
+skeleton "{\n    \"include\": [\"${PWD}/waybar/config\"]\n}" ~/.config/waybar/config
+skeleton "@import \"${PWD}/waybar/style.css\";" ~/.config/waybar/style.css
 # Vim.
 skeleton "source ${PWD}/vim/.vimrc" ~/.vimrc
 # Neovim.
