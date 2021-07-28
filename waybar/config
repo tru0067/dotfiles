@@ -2,7 +2,12 @@
     "height": 26,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-right": ["tray", "pulseaudio", "battery", "clock"],
-    "sway/workspaces": {},
+    "sway/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "10": "0"
+        }
+    },
     "sway/mode": {},
     "tray": {},
     "pulseaudio": {
