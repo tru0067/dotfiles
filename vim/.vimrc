@@ -60,7 +60,12 @@ inoremap <C-Del> <C-\><C-O>dw
 vnoremap <C-J> :m '>+1<CR>gv=gv
 vnoremap <C-K> :m '<-2<CR>gv=gv
 let mapleader=" "
+" Open file explorer.
 nnoremap <leader>e :Lex<CR>
+" See unsaved changes.
+nnoremap <leader>C :w !diff % -<CR>
+" Let " add quotes around visual selection.
+vnoremap <leader>" <ESC>`<i"<ESC>`>a"<ESC>
 
 " File explorer.
 let g:netrw_browse_split=2             " Open from netrw in new vsplit.
