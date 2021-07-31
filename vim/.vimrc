@@ -1,3 +1,5 @@
+" This collection of settings aims to make the vim experience as pleasant as
+" possible, while also remaining quite vanilla.
 syntax on                              " Enable syntax highlighting.
 filetype plugin indent on              " Enable filetype and plugin specific indenting.
 " Broad settings.
@@ -46,26 +48,6 @@ set listchars+=tab:\|->                " Tabs.
 set listchars+=trail:-                 " Trailing spaces.
 set listchars+=extends:>               " Text extending past end of window.
 set listchars+=precedes:<              " Text preceding past start of window.
-
-" Bindings.
-" Y yanks to end of line (consistent with D and C).
-nnoremap Y y$
-" Let Ctrl-W delete the previous WORD.
-inoremap <C-W> <C-\><C-O>dB
-" Let Ctrl-Backspace delete the previous word.
-inoremap <C-H> <C-\><C-O>db
-" Let Ctrl-Delete delete the next word.
-inoremap <C-Del> <C-\><C-O>dw
-" Let Ctrl-J/Ctrl-K move the selected region down/up.
-vnoremap <C-J> :m '>+1<CR>gv=gv
-vnoremap <C-K> :m '<-2<CR>gv=gv
-let mapleader=" "
-" Open file explorer.
-nnoremap <leader>e :Lex<CR>
-" See unsaved changes.
-nnoremap <leader>C :w !diff % -<CR>
-" Let " add quotes around visual selection.
-vnoremap <leader>" <ESC>`<i"<ESC>`>a"<ESC>
 
 " File explorer.
 let g:netrw_browse_split=2             " Open from netrw in new vsplit.

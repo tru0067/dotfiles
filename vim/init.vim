@@ -1,3 +1,4 @@
+" This config aims to enhance and extend the default vim experience.
 source ~/.vimrc                        " Source the vim specific settings first.
 
 set rtp+=~/dotfiles/vim
@@ -32,6 +33,28 @@ EOF
 
 " Statusline.
 source ~/dotfiles/vim/statusline.vim
+
+" Bindings.
+" Y yanks to end of line (consistent with D and C).
+nnoremap Y y$
+" Let Ctrl-W delete the previous WORD.
+inoremap <C-W> <C-\><C-O>dB
+" Let Ctrl-Backspace delete the previous word.
+inoremap <C-H> <C-\><C-O>db
+" Let Ctrl-Delete delete the next word.
+inoremap <C-Del> <C-\><C-O>dw
+" Let Ctrl-J/Ctrl-K move the selected region down/up.
+vnoremap <C-J> :m '>+1<CR>gv=gv
+vnoremap <C-K> :m '<-2<CR>gv=gv
+let mapleader=" "
+" Open file explorer.
+nnoremap <leader>e :Lex<CR>
+" See unsaved changes.
+nnoremap <leader>C :w !diff % -<CR>
+" Add quotes around visual selection.
+" TODO: Would like to have a version of this that does not pollute the jumplist,
+"       and which places the cursor back at the same position.
+vnoremap <leader>" <ESC>`<i"<ESC>`>a"<ESC>
 
 " Autocommands.
 " Highlight yanks.
