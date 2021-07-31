@@ -56,6 +56,9 @@ inoremap <C-W> <C-\><C-O>dB
 inoremap <C-H> <C-\><C-O>db
 " Let Ctrl-Delete delete the next word.
 inoremap <C-Del> <C-\><C-O>dw
+" Let Ctrl-J/Ctrl-K move the selected region down/up.
+vnoremap <C-J> :m '>+1<CR>gv=gv
+vnoremap <C-K> :m '<-2<CR>gv=gv
 let mapleader=" "
 nnoremap <leader>e :Lex<CR>
 
