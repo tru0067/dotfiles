@@ -14,6 +14,7 @@ Plug 'SirVer/ultisnips'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
+Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
 " UltiSnips
@@ -30,6 +31,9 @@ require'nvim-treesitter.configs'.setup{
     highlight = {enable = true}
 }
 EOF
+
+" Colorizer.
+lua require"colorizer".setup({"*"}, {RGB=false; names=false})
 
 " Statusline.
 source ~/dotfiles/vim/statusline.vim
