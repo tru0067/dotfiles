@@ -31,6 +31,7 @@ set nowrap                             " Do not visually wrap long lines.
 set scrolloff=8                        " Keep 8 lines on screen while scrolling.
 set sidescrolloff=8                    " Keep 8 columns on screen while scrolling.
 set colorcolumn=81                     " Put a column line just after 80 characters.
+set foldmethod=marker                  " Allow manual folding and the use of `{{{` and `}}}` to mark folds.
 set foldcolumn=auto                    " Show a column to indicate folds.
 " Command line.
 set showmode                           " Show the current mode.
