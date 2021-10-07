@@ -39,6 +39,7 @@
     # Basics:
         # Start firefox.
         bindsym $mod+Backspace exec firefox
+        bindsym $mod+Shift+Backspace exec firefox --private-window
         # Start file manager.
         bindsym $mod+backslash exec thunderbird
         # Start a terminal.
