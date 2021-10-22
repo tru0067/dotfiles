@@ -5,4 +5,4 @@
 " q     Allow formatting with "gq".
 " n     Recognize numbered lists when formatting.
 " j     Remove comment leader when joining lines with "J".
-setlocal formatoptions=croqnj
+setlocal formatoptions=croqj

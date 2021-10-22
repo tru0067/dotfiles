@@ -9,4 +9,4 @@ setlocal spell
 " n     Recognize numbered lists when formatting.
 " j     Remove comment leader when joining lines with "J".
 " l     Lines already longer than textwidth are not automatically broken.
-setlocal formatoptions=tcroqnjl
+setlocal formatoptions=tcroqjl
