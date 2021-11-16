@@ -59,6 +59,9 @@ nnoremap <leader>C :w !diff % -<CR>
 " TODO: Would like to have a version of this that does not pollute the jumplist,
 "       and which places the cursor back at the same position.
 vnoremap <leader>" <ESC>`<i"<ESC>`>a"<ESC>
+" Correct the last spelling error.
+inoremap <C-L> <C-G>u<ESC>[s1z=`]a<C-G>u
+nnoremap <C-L> m`[s1z=``
 
 " Autocommands.
 " Highlight yanks.
