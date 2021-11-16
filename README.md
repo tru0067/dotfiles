@@ -35,12 +35,11 @@ A brief outline of some common steps when performing a fresh install.
 ### TODO
 -   Sway
     -   Set up sway idle/lock
+    -   Multiple monitors
 -   Change terminal emulator to `kitty`
     -   Underline and images
     -   Want to check battery performance though
 -   Configure NeoVim
     -   Built-in LSP
-    -   LaTeX/markdown plugins
-        -   Language injection with TreeSitter?
     -   Refactor makeprg's into compiler scripts
         -   Along with error format?
