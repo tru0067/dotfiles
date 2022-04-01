@@ -37,6 +37,7 @@ lua require"colorizer".setup({"*"}, {RGB=false; names=false})
 
 " Statusline.
 source ~/dotfiles/vim/statusline.vim
+set laststatus=3
 
 " Bindings.
 " Y yanks to end of line (consistent with D and C).
