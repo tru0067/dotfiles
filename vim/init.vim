@@ -50,18 +50,16 @@ inoremap <C-Del> <C-\><C-O>dw
 " Let Ctrl-J/Ctrl-K move the selected region down/up.
 vnoremap <C-J> :m '>+1<CR>gv=gv
 vnoremap <C-K> :m '<-2<CR>gv=gv
-let mapleader=" "
-" Open file explorer.
-nnoremap <leader>e :Lex<CR>
-" See unsaved changes.
-nnoremap <leader>C :w !diff % -<CR>
-" Add quotes around visual selection.
-" TODO: Would like to have a version of this that does not pollute the jumplist,
-"       and which places the cursor back at the same position.
-vnoremap <leader>" <ESC>`<i"<ESC>`>a"<ESC>
 " Correct the last spelling error.
 inoremap <C-L> <C-G>u<ESC>[s1z=`]a<C-G>u
 nnoremap <C-L> m`[s1z=``
+let mapleader=" "
+" Open file explorer.
+nnoremap <leader>e :Lex<CR>
+
+" Commands.
+" See unsaved changes.
+command Changes :w !diff % -
 
 " Autocommands.
 " Highlight yanks.
