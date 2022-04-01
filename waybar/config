@@ -32,7 +32,6 @@
     "clock": {
         "format": "{:%Y-%m-%d %H:%M}",
         "tooltip-format": "{:%A %-d %B %Y}",
-        "timezone": "America/Vancouver",
         "timezones": ["Australia/Melbourne", "America/Vancouver"]
     }
 }
