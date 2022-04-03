@@ -28,5 +28,7 @@ skeleton "@import \"${PWD}/waybar/style.css\";" ~/.config/waybar/style.css
 skeleton "source ${PWD}/vim/.vimrc" ~/.vimrc
 # Neovim.
 skeleton "source ${PWD}/vim/init.vim" ~/.config/nvim/init.vim
+# Zathura.
+skeleton "include ${PWD}/zathura/zathurarc" ~/.config/zathura/zathurarc
 # Zsh.
 skeleton "source ${PWD}/zsh/.zshrc" ~/.zshrc
