@@ -59,3 +59,5 @@ require"nvim-treesitter.configs".setup{
 }
 
 require"colorizer".setup({"*"}, {RGB = false, names = false})
+
+require"lsp_setup"
