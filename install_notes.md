@@ -52,13 +52,11 @@ My editor of choice is neovim:
 sudo apt install neovim
 ```
 
-For Neovim I use `vim-plug` to manage my plugins, available at:
-<https://github.com/junegunn/vim-plug>.
-
-I use the UltiSnips plugin to manage my snippets. In order for it to work we
-need a python provider for neovim:
+For Neovim I use `packer.nvim` to manage my plugins, available at:
+<https://github.com/wbthomason/packer.nvim>. In order for my Neovim config to
+work, I will first have to install packer:
 ```sh
-pip intall pynvim
+git clone https://github.com/wbthomason/packer.nvim ~/.config/nvim/pack/packer/start/packer.nvim
 ```
 
 In order to build the latest version of Neovim from source, follow along with
