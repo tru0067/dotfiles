@@ -43,5 +43,19 @@ augroup END
 ]]
 
 require"packer".startup(function(use)
-    use"wbthomason/packer.nvim"
+    use{"wbthomason/packer.nvim"}
+    -- Neovim core plugins.
+    use{"neovim/nvim-lspconfig"}
+    use{"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+    use{"nvim-treesitter/playground"}
+    -- My plugins.
+    --use{"JuliaEditorSupport/julia-vim"}  -- Cool project, but doesn't add anything I actually use at this time.
+    use{"norcalli/nvim-colorizer.lua"}
 end)
+
+require"nvim-treesitter.configs".setup{
+    ensure_installed = {"bibtex", "julia", "latex", "lua", "python", "query"},
+    highlight = {enable = true}
+}
+
+require"colorizer".setup({"*"}, {RGB = false, names = false})
