@@ -1,3 +1,4 @@
+vim.cmd[[
 " This config aims to enhance and extend the default vim experience.
 source ~/.vimrc                        " Source the vim specific settings first.
 
@@ -26,8 +27,8 @@ let g:UltiSnipsJumpBackwardTrigger="<C-K>"
 
 " TreeSitter.
 lua <<EOF
-require'nvim-treesitter.configs'.setup{
-    ensure_installed = {"julia", "latex", "lua", "python", "query"},
+require"nvim-treesitter.configs".setup{
+    ensure_installed = {"bibtex", "julia", "latex", "lua", "python", "query"},
     highlight = {enable = true}
 }
 EOF
@@ -40,8 +41,6 @@ source ~/dotfiles/vim/statusline.vim
 set laststatus=3
 
 " Bindings.
-" Y yanks to end of line (consistent with D and C).
-nnoremap Y y$
 " Let Ctrl-W delete the previous WORD.
 inoremap <C-W> <C-\><C-O>dB
 " Let Ctrl-Backspace delete the previous word.
@@ -68,3 +67,4 @@ augroup highlight_yank
     autocmd!
     au TextYankPost * silent! lua vim.highlight.on_yank{higroup="Visual", timeout=120}
 augroup END
+]]
