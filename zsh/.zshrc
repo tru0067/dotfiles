@@ -4,7 +4,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # Miscellaneous settings.
-setopt autocd                          # Automatically cd if the command is a filename.
 unsetopt beep                          # Don't beep.
 
 # Setting defaults.
