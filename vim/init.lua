@@ -48,6 +48,15 @@ require"packer".startup(function(use)
     use{"neovim/nvim-lspconfig"}
     use{"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
     use{"nvim-treesitter/playground"}
+    -- Completion.
+    use{"hrsh7th/nvim-cmp"}
+    use{"hrsh7th/cmp-buffer"}
+    --use{"hrsh7th/cmp-cmdline"}
+    use{"hrsh7th/cmp-nvim-lsp"}
+    --use{"hrsh7th/cmp-path"}
+    -- Snippets.
+    use{"L3MON4D3/LuaSnip"}
+    use{"saadparwaiz1/cmp_luasnip"}
     -- My plugins.
     --use{"JuliaEditorSupport/julia-vim"}  -- Cool project, but doesn't add anything I actually use at this time.
     use{"norcalli/nvim-colorizer.lua"}
