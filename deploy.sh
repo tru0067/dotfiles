@@ -19,6 +19,8 @@ skeleton() {
 skeleton "import:\n  - ${PWD}/alacritty/alacritty.yml" ~/.config/alacritty/alacritty.yml
 # Git.
 skeleton "[include]\n\tpath = ${PWD}/git/.gitconfig" ~/.gitconfig
+# Kitty.
+skeleton "include ${PWD}/kitty/kitty.conf" ~/.config/kitty/kitty.conf
 # Sway.
 skeleton "include ${PWD}/sway/config" ~/.config/sway/config
 # Waybar.

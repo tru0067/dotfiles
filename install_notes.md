@@ -29,7 +29,17 @@ sudo add-apt-repository ppa:mmstick76/alacritty
 sudo apt-get update
 sudo apt install alacritty
 ```
-I'll then want to make alacritty my default terminal emulator (this may not be
+
+### Kitty
+I am currently in the process of migrating from alacritty to kitty. I chose to
+do so because kitty supports:
+-   clicking on hyperlinks
+-   images in the terminal
+-   curly underlines/ligatures (not things I currently use, but could be nice).
+```sh
+sudo apt install kitty
+```
+I'll then want to make kitty my default terminal emulator (this may not be
 necessary, but good to know how to do):
 ```sh
 sudo update-alternatives --config x-terminal-emulator
