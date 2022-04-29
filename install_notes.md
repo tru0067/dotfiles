@@ -78,7 +78,7 @@ allows me to easily switch between both versions by simply running `vim` or
 `vi`.
 
 ### PCManFM
-My file manager of choice is PCManFM:
+My current file manager is PCManFM:
 ```
 sudo apt install pcmanfm
 ```
@@ -187,17 +187,11 @@ conda config --set changeps1 False
 ```
 
 ### LaTeX, Pandoc and other writing tools
-I often use LaTeX for academic writing, and for its PDF capabilities when
-combined with Pandoc. I default to the TeXLive distribution:
+I often use LaTeX for academic writing. I default to the TeXLive distribution.
+I also like Pandoc (to create PDFs from markdown documents) and Patat (to create
+presentations within the terminal).
 ```sh
-sudo apt install texlive texlive-latex-extra pandoc
-```
-
-Another very awesome tool is Patat, which uses Pandoc to create presentations
-from within the terminal. Patat can even display images (through Kitty's `icat`
-kitten (Patat version >= 0.8.7) or through `w3m-img`).
-```sh
-sudo apt install patat
+sudo apt install texlive-full pandoc patat
 ```
 
 ### Cloud storage
