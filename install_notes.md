@@ -33,12 +33,32 @@ sudo apt install alacritty
 ### Kitty
 I am currently in the process of migrating from alacritty to kitty. I chose to
 do so because kitty supports:
--   clicking on hyperlinks
--   images in the terminal
--   curly underlines/ligatures (not things I currently use, but could be nice).
+-   Clicking on hyperlinks (alacritty can do this too, but does not support OSC
+    8 escape sequences yet afaik).
+-   Images in the terminal.
+-   Curly underlines/ligatures (not things I currently use, but could be nice).
+My gripes with kitty are that
+-   When the window is resized, the same amount of text is displayed, with blank
+    space opening up beneath. No scrolling occurs.
+-   When the window is full screened, it is not always 'focused' (?) (this only
+    happens when the mouse was hovered over certain areas of the screen). I need
+    to move the mouse before I can scroll.
+
+Kitty can be installed with:
 ```sh
 sudo apt install kitty
 ```
+Or get the latest release through the installer with:
+```sh
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+```
+This does not install kitty system-wide (so Sway will not know about it). I can
+do so with:
+```sh
+sudo ln -s ~/.local/kitty.app/bin/kitty /usr/local/bin/kitty
+```
+See <https://sw.kovidgoyal.net/kitty/binary/> for more.
+
 I'll then want to make kitty my default terminal emulator (this may not be
 necessary, but good to know how to do):
 ```sh

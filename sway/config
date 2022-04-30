@@ -43,7 +43,7 @@
         # Start file manager.
         bindsym $mod+backslash exec thunderbird
         # Start a terminal.
-        bindsym $mod+Return exec alacritty
+        bindsym $mod+Return exec kitty
         # Start thunderbird.
         bindsym $mod+ISO_Level3_Shift exec pcmanfm
         # Kill focused window.
