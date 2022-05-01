@@ -5,16 +5,24 @@
 ##### `git/`
 Very simple `.gitconfig`.
 
+##### `gnome/`
+Some minor tweaks for when I do use GNOME.
+
+##### `kitty/`
+
+##### `sway/`
+All my window manager config.
+
 ##### `vim/`
 A bare minimum `.vimrc` as well as my `init.vim`. For my vim colorscheme see
 <https://github.com/tru0067/verdurous>.
 
-##### `wm/`
-All my window manager config. Contains some tweaks to the Gnome DE, as well as
-my config for `sway` and `waybar`.
+##### `waybar/`
 
 ##### `xkb/`
 My custom keyboard layout.
+
+##### `zathura/`
 
 ##### `zsh/`
 Aliases and prompt.
