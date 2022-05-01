@@ -15,8 +15,6 @@ skeleton() {
     fi
 }
 
-# Alacritty.
-skeleton "import:\n  - ${PWD}/alacritty/alacritty.yml" ~/.config/alacritty/alacritty.yml
 # Git.
 skeleton "[include]\n\tpath = ${PWD}/git/.gitconfig" ~/.gitconfig
 # Kitty.

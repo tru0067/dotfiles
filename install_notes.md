@@ -21,29 +21,7 @@ git remote set-url origin https://tru0067@github.com/tru0067/dotfiles.git
 git config credential.helper store
 ```
 
-### Alacritty
-Alacritty is not as of yet in the official Ubuntu repos. Thus I install it from
-the popOS PPA:
-```sh
-sudo add-apt-repository ppa:mmstick76/alacritty
-sudo apt-get update
-sudo apt install alacritty
-```
-
 ### Kitty
-I am currently in the process of migrating from alacritty to kitty. I chose to
-do so because kitty supports:
--   Clicking on hyperlinks (alacritty can do this too, but does not support OSC
-    8 escape sequences yet afaik).
--   Images in the terminal.
--   Curly underlines/ligatures (not things I currently use, but could be nice).
-My gripes with kitty are that
--   When the window is resized, the same amount of text is displayed, with blank
-    space opening up beneath. No scrolling occurs.
--   When the window is full screened, it is not always 'focused' (?) (this only
-    happens when the mouse was hovered over certain areas of the screen). I need
-    to move the mouse before I can scroll.
-
 Kitty can be installed with:
 ```sh
 sudo apt install kitty
