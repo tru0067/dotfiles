@@ -112,4 +112,10 @@ require"lspconfig".sumneko_lua.setup{
     on_attach = on_attach,
     handlers = handlers,
 }
+-- Julia.
+require"lspconfig".julials.setup{
+    capabilities = capabilities,
+    on_attach = on_attach,
+    handlers = handlers,
+}
 -- }}}

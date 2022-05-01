@@ -180,6 +180,14 @@ In order for firefox to use the wayland backend, it may be necessary to add
 
 ## Other programs or packages
 
+### LaTeX, Pandoc and other writing tools
+I often use LaTeX for academic writing. I default to the TeXLive distribution.
+I also like Pandoc (to create PDFs from markdown documents) and Patat (to create
+presentations within the terminal).
+```sh
+sudo apt install texlive-full pandoc patat
+```
+
 ### Anaconda
 When developing with python, I typically use the Anaconda distribution,
 available at <https://www.anaconda.com/products/individual>.
@@ -194,12 +202,12 @@ To disable Anaconda from changing the prompt run:
 conda config --set changeps1 False
 ```
 
-### LaTeX, Pandoc and other writing tools
-I often use LaTeX for academic writing. I default to the TeXLive distribution.
-I also like Pandoc (to create PDFs from markdown documents) and Patat (to create
-presentations within the terminal).
+### Julia
+When developing with julia, just get the latest release, available at
+<https://julialang.org/downloads/>, extract this with `tar -xf julia-version`
+and then add a link somewhere to the path, e.g.:
 ```sh
-sudo apt install texlive-full pandoc patat
+ln -s ~/builds/julia-1.7.2/bin/julia ~/.local/bin/julia
 ```
 
 ### Cloud storage
