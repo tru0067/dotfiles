@@ -41,7 +41,5 @@ A brief outline of some common steps when performing a fresh install.
 -   Sway
     -   Set up sway idle/lock
     -   Multiple monitors
--   Configure NeoVim
-    -   Built-in LSP
-    -   Refactor makeprg's into compiler scripts
-        -   Along with error format?
+-   NeoVim
+    -   Error format for compilers
