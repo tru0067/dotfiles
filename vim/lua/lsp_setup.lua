@@ -1,6 +1,11 @@
 -- Largely default setup. See <https://github.com/hrsh7th/nvim-cmp>,
 -- <https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#super-tab-like-mapping>,
 -- and <https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion>.
+-- `nvim-lsp-installer` setup. {{{
+require("nvim-lsp-installer").setup {
+    automatic_installation = true
+}
+-- }}}
 -- `nvim-cmp` setup. {{{
 vim.opt.completeopt = {"menu", "menuone", "noselect"}
 

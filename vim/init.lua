@@ -44,6 +44,7 @@ require"packer".startup(function(use)
     use{"wbthomason/packer.nvim"}
     -- Neovim core plugins.
     use{"neovim/nvim-lspconfig"}
+    use{"williamboman/nvim-lsp-installer"}
     use{"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
     use{"nvim-treesitter/playground"}
     -- Completion.
