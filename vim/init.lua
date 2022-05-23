@@ -70,3 +70,4 @@ require"colorizer".setup({"*"}, {RGB = false, names = false})
 
 -- Other config files.
 require"lsp_setup"
+require"fractional_scrolloff"
