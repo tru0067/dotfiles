@@ -1,0 +1,11 @@
+snippet make "Makefile"
+C = compiler
+
+all: target
+
+target: source.ext
+	$(C) source.ext
+
+clean:
+	$(RM) main.tmp
+endsnippet
