@@ -27,8 +27,8 @@ xkb_symbols "modded" {
     key <AD06> { [            y, Y,                   U03C5, U03A5,               equal, equal,            NoSymbol, U2282        ], type[Group1] = "EIGHT_LEVEL" };
     key <AD07> { [            u, U,                   U03B8, U0398,                plus, plus,             NoSymbol, U222A        ], type[Group1] = "EIGHT_LEVEL" };
     key <AD08> { [            i, I,                   U03B9, U0399,               minus, minus,            NoSymbol, U2229        ], type[Group1] = "EIGHT_LEVEL" };
-    key <AD09> { [            o, O,                   U03BF, U039F,            asterisk, asterisk,         NoSymbol, U2283        ], type[Group1] = "EIGHT_LEVEL" };
-    key <AD10> { [            p, P,                   U03C0, U03A0,               slash, slash,            NoSymbol, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
+    key <AD09> { [            o, O,                   U03BF, U039F,            asterisk, asterisk,            U00D7, U2283        ], type[Group1] = "EIGHT_LEVEL" };
+    key <AD10> { [            p, P,                   U03C0, U03A0,               slash, slash,               U00F7, NoSymbol     ], type[Group1] = "EIGHT_LEVEL" };
     key <AD11> { [  bracketleft, braceleft    ] };
     key <AD12> { [ bracketright, braceright,       NoSymbol, NoSymbol,         NoSymbol, NoSymbol,            U2248, U221D        ], type[Group1] = "EIGHT_LEVEL" };
     key <BKSL> { [    backslash, bar          ] };
