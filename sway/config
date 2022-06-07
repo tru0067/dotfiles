@@ -163,6 +163,6 @@
     }
 
 # Autostart.
-exec ~/Downloads/pcloud
+#exec ~/Downloads/pcloud
 
 include /etc/sway/config.d/*
