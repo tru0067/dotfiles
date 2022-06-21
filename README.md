@@ -37,6 +37,13 @@ within this directory.
 ##### `install_notes.md`
 A brief outline of some common steps when performing a fresh install.
 
+### Useful config stuff you need to know
+
+-   If you use firefox, by setting `full-screen-api.ignore-widgets` to `true`
+    (fastest to find by searching `dgets`) in `about:config`, you can maximise
+    *windows* while keeping them *windowed*. This allows you to fullscreen
+    videos while keeping them inside the bounds set by your window manager!
+
 ### TODO
 -   Sway
     -   Set up sway idle/lock
