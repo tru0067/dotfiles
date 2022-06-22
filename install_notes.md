@@ -81,9 +81,9 @@ cd /etc/alternatives
 sudo rm vi
 sudo ln -s /usr/local/bin/nvim vi
 ```
-Since the alternative for `vim` should still point to the packaged binary this
-allows me to easily switch between both versions by simply running `vim` or
-`vi`.
+Since the alternatives for `nvim` and `vim` should still point to the packaged
+binary this allows me to easily switch between all versions by simply running
+`nvim`, `vim` or `vi`.
 
 ### PCManFM
 My current file manager is PCManFM:
