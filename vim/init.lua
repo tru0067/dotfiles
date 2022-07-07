@@ -56,6 +56,8 @@ require"packer".startup(function(use)
     -- Snippets.
     use{"L3MON4D3/LuaSnip"}
     use{"saadparwaiz1/cmp_luasnip"}
+    -- Telescope.
+    use{"nvim-telescope/telescope.nvim", requires = {{"nvim-lua/plenary.nvim"}}}
     -- My plugins.
     --use{"JuliaEditorSupport/julia-vim"}  -- Cool project, but doesn't add anything I actually use at this time.
     use{"norcalli/nvim-colorizer.lua"}
@@ -70,4 +72,4 @@ require"colorizer".setup({"*"}, {RGB = false, names = false})
 
 -- Other config files.
 require"lsp_setup"
-require"fractional_scrolloff"
+require"scrolloff"
