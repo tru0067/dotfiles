@@ -1,3 +1,5 @@
 include /home/tru0067/.config/zathura/colors/verdurous-darker
 
+set show-recent 0
+
 set font "BlexMono Nerd Font Mono Regular 10"
