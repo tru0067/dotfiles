@@ -10,3 +10,7 @@ setlocal spell
 " j     Remove comment leader when joining lines with "J".
 " l     Lines already longer than textwidth are not automatically broken.
 setlocal formatoptions=tcroqjl
+
+lua << EOF
+vim.api.nvim_create_user_command("View", ":!zathura %:r.pdf & disown", {})
+EOF
