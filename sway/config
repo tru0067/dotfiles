@@ -129,10 +129,10 @@
         # TODO: Add window screenshots with swaymsg and jq?
     # Bluetooth:
         # Open up a bluetooth manager.
-        for_window [app_id="blueman-manager"] floating enable
-        for_window [app_id="blueman-manager"] resize set height 50 ppt
-        for_window [app_id="blueman-manager"] border none
-        bindsym $mod+o exec blueman-manager
+#        for_window [app_id="blueman-manager"] floating enable
+#        for_window [app_id="blueman-manager"] resize set height 50 ppt
+#        for_window [app_id="blueman-manager"] border none
+#        bindsym $mod+o exec blueman-manager
     # Volume buttons:
         bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
         bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
