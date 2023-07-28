@@ -47,6 +47,5 @@ A brief outline of some common steps when performing a fresh install.
 ### TODO
 -   Sway
     -   Set up sway idle/lock
-    -   Multiple monitors
 -   NeoVim
     -   Error format for compilers
