@@ -24,7 +24,7 @@ set softtabstop=4                      " Insert up to 4 spaces when tab is press
 set shiftwidth=4                       " Use 4 spaces for autoindentation and for >>, << and ==.
 set expandtab                          " Convert tabs to spaces.
 " Visual settings.
-set relativenumber                     " Show relative line numbers.
+"set relativenumber                     " Show relative line numbers.
 set number                             " Show the current line's number.
 set ruler                              " Show coordinates in bottom right.
 set nowrap                             " Do not visually wrap long lines.
