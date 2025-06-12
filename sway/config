@@ -134,12 +134,12 @@
 #        for_window [app_id="blueman-manager"] border none
 #        bindsym $mod+o exec blueman-manager
     # Volume buttons:
-        bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-        bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-        bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-        bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-        bindsym $mod+Down exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-        bindsym $mod+Up exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+        bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
+        bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
+        bindsym XF86AudioMute exec amixer -D pulse set Master toggle
+        bindsym XF86AudioMicMute exec amixer -D pulse set Capture toggle
+        bindsym $mod+Down exec amixer -D pulse sset Master 5%-
+        bindsym $mod+Up exec amixer -D pulse sset Master 5%+
     # Brightness buttons:
         bindsym XF86MonBrightnessDown exec brightnessctl -e set 5%-
         bindsym XF86MonBrightnessUp exec brightnessctl -e set +5%
