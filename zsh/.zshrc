@@ -3,6 +3,9 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+# Add .NET tools to path (for git-credential-manager) and configure GCM.
+export PATH="$PATH:/home/tru0067/.dotnet/tools"
+
 # Miscellaneous settings.
 unsetopt beep                          # Don't beep.
 

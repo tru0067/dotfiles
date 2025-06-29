@@ -7,9 +7,19 @@ First and foremost, I'll need git:
 ```sh
 sudo apt install git
 ```
-I'll probably want to set up a personal access token for this machine. I also
-like to use a remote url that contains my username, as this makes it easy to
-manage multiple accounts, along with storing my credentials:
+
+And then Git Credential Manager for my credentials, installed as a DotNET tool:
+```sh
+sudo apt install dotnet-sdk-8.0
+dotnet tool install -g git-credential-manager
+git-credential-manager configure
+git config --global credential.credentialStore cache
+```
+See <https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/install.md>
+
+I also like to use a remote url that contains my username, as this makes it easy
+to manage multiple accounts (this might not be required when using GCM, I'll
+have to wait and see!):
 ```sh
 # Clone with username in url.
 git clone https://tru0067@github.com/tru0067/dotfiles.git
@@ -17,8 +27,6 @@ git clone https://tru0067@github.com/tru0067/dotfiles.git
 git remote add origin https://tru0067@github.com/tru0067/dotfiles.git
 # Change remote url to one with username.
 git remote set-url origin https://tru0067@github.com/tru0067/dotfiles.git
-# Use stored credentials.
-git config credential.helper store
 ```
 
 ### Kitty
