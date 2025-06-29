@@ -68,13 +68,6 @@ My editor of choice is neovim:
 sudo apt install neovim
 ```
 
-For Neovim I use `packer.nvim` to manage my plugins, available at:
-<https://github.com/wbthomason/packer.nvim>. In order for my Neovim config to
-work, I will first have to install packer:
-```sh
-git clone https://github.com/wbthomason/packer.nvim ~/.config/nvim/pack/packer/start/packer.nvim
-```
-
 In order to build the latest version of Neovim from source, follow along with
 <https://github.com/neovim/neovim/wiki/Building-Neovim>. For using the "Release"
 build, make it with:
@@ -92,15 +85,6 @@ sudo ln -s /usr/local/bin/nvim vi
 Since the alternatives for `nvim` and `vim` should still point to the packaged
 binary this allows me to easily switch between all versions by simply running
 `nvim`, `vim` or `vi`.
-
-### PCManFM
-My current file manager is PCManFM:
-```
-sudo apt install pcmanfm
-```
-
-TODO: Do I want PCManFM to manage desktop icons? `pcmanfm --desktop`. Would this
-work with sway?
 
 ## Appearance
 
@@ -217,12 +201,3 @@ and then add a link somewhere to the path, e.g.:
 ```sh
 ln -s ~/builds/julia-1.7.2/bin/julia ~/.local/bin/julia
 ```
-
-### Cloud storage
-I currently use pCloud for my cloud storage. The download for their appimage can
-be found at:
-<https://www.pcloud.com/download-free-online-cloud-file-storage.html>
-
-### Spotify
-Spotify is available on Ubuntu! It can be found at:
-<https://www.spotify.com/au/download/linux/>
