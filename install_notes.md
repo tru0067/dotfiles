@@ -74,6 +74,10 @@ build, make it with:
 ```sh
 sudo make CMAKE_BUILD_TYPE=Release install
 ```
+Possibly after checking out a suitable release tag e.g.:
+```sh
+git checkout tags/v0.11.2
+```
 The built binary should be earlier on the path than the packaged one, so it
 should be fine to run with `nvim`. To use it with a shorter command, such as
 `vi` one can override the normal alternative in `/etc/alternatives`. E.g. with:
