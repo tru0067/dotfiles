@@ -39,37 +39,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     end,
 })
 
--- Plugins.
-require"packer".startup(function(use)
-    use{"wbthomason/packer.nvim"}
-    -- Neovim core plugins.
-    use{"neovim/nvim-lspconfig"}
-    use{"williamboman/nvim-lsp-installer"}
-    use{"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
-    use{"nvim-treesitter/playground"}
-    -- Completion.
-    use{"hrsh7th/nvim-cmp"}
-    --use{"hrsh7th/cmp-buffer"}
-    --use{"hrsh7th/cmp-cmdline"}
-    use{"hrsh7th/cmp-nvim-lsp"}
-    --use{"hrsh7th/cmp-path"}
-    -- Snippets.
-    use{"L3MON4D3/LuaSnip"}
-    use{"saadparwaiz1/cmp_luasnip"}
-    -- Telescope.
-    use{"nvim-telescope/telescope.nvim", requires = {{"nvim-lua/plenary.nvim"}}}
-    -- My plugins.
-    --use{"JuliaEditorSupport/julia-vim"}  -- Cool project, but doesn't add anything I actually use at this time.
-    use{"norcalli/nvim-colorizer.lua"}
-end)
-
-require"nvim-treesitter.configs".setup{
-    ensure_installed = {"bibtex", "julia", "latex", "lua", "python", "query"},
-    highlight = {enable = true}
-}
-
-require"colorizer".setup({"*"}, {RGB = false, names = false})
-
 -- Other config files.
-require"lsp_setup"
 require"scrolloff"
