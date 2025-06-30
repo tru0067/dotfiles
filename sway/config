@@ -42,11 +42,9 @@
         bindsym $mod+Backspace exec firefox
         bindsym $mod+Shift+Backspace exec firefox --private-window
         # Start file manager.
-        bindsym $mod+backslash exec thunderbird
+        bindsym $mod+backslash exec pcmanfm
         # Start a terminal.
         bindsym $mod+Return exec kitty
-        # Start thunderbird.
-        bindsym $mod+ISO_Level3_Shift exec pcmanfm
         # Kill focused window.
         bindsym $mod+Shift+q kill
         # Start your launcher.
