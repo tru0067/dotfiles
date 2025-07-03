@@ -125,6 +125,9 @@
         bindsym $mod+Control+p exec grim -g "$(slurp)" - | wl-copy
         bindsym $mod+Control+Shift+p exec grim -g "$(slurp)" ~/Pictures/$(date +screenshot-%Y%m%dT%H%M%S.png)
         # TODO: Add window screenshots with swaymsg and jq?
+    # Screen mirroring:
+        bindsym $mod+m exec wl-mirror
+        bindsym $mod+Shift+m exec wl-mirror -r "$(slurp)"
     # Bluetooth:
         # Open up a bluetooth manager.
 #        for_window [app_id="blueman-manager"] floating enable
